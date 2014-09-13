@@ -1,0 +1,30 @@
+<div class="mobile_icson">
+                <div class="mi_glide">
+                    <ul class="mi_glide_cont" id="j_mi_cont">
+                        <li>
+                            <div class="mobile_icson_hd">
+                                <div class="mobile_icson_tit">手机易迅</div>
+                            </div>
+                            <div class="mobile_icson_bd">
+                                <p class="mobile_icson_tdcode"></p>
+                                <p class="mobile_icson_desp">
+                                    <a target="_blank"  href="#">随时随地购物，</a><br /><a target="_blank" ytag="15303" href="#">手机专享特价！</a><br /><a target="_blank" class="mobile_icson_down"  href="#">下载客户端</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="hide">
+                            <div class="mobile_icson_hd">
+                                <div class="mobile_icson_tit">易迅官方微信</div>
+                            </div>
+                            <div class="mobile_icson_bd">
+                                <p class="mobile_icson_tdcode mobile_icson_tdcode_wx"></p>
+                                <p class="mobile_icson_desp mobile_icson_desp_wx">微信扫描二维码，劲爆优惠触手可得</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mi_glide_trig" id="j_mi_trig">
+                        <p class="on">&bull;</p>
+                        <p >&bull;</p>
+                    </div>
+                </div>
+            </div>

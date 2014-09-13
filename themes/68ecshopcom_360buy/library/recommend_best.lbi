@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <!--{foreach from=$best_goods item=goods name=name}-->
+      <li {if $smarty.foreach.name.first}class="ulike_r1_narrow"{/if} 
+      {if $smarty.foreach.name.iteration>1 && $smarty.foreach.name.iteration<4}class="ulike_r1_mark_wrap"{/if}
+     >
+        <div class="mod_goods mod_goods_w80" _loaded="true">
+          <div class="mod_goods_img load_effect"> <a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"  width="80" height="80"/></a> </div>
+          <div class="mod_goods_info">
+            <p <!-- {if $goods.promote_price neq ""} -->class="mod_goods_promo"<!--{else}-->class="mod_goods_tit"<!-- {/if}-->><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}" >{$goods.short_style_name}</a></p>
+            <p class="mod_goods_price"><span class="mod_price"><span><!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></span></p>
+          </div>
+        </div>
+      </li>
+      <!--{/foreach}-->
+      
+    

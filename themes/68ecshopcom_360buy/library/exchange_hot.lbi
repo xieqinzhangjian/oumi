@@ -1,0 +1,36 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $hot_goods}-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="m" id="i-right" >
+  <div id="hotsale">
+    <div class="mt">
+      <h2>火爆兑换</h2>
+    </div>
+    <div class="mc list-h">
+      <!--{foreach from=$hot_goods item=goods}-->
+      <dl>
+        <dt><a target="_blank" href='{$goods.url}'><img src="{$goods.thumb}" width="120" height="120" alt='{$goods.name|escape:html}' /></a></dt>
+        <dd>
+          <div class="p-name"><a target="_blank" href='{$goods.url}'>{$goods.name}</a></div>
+          <div class="p-name1"><font color="#FF7300" >{$goods.act_title}</font></div>
+          
+          <div class="p-price" >兑换积分：<font class="shop_price" style="font-size:14px; color:#D70000; font-weight:bold;">
+             {$goods.exchange_integral}
+            </font></div>
+          
+        </dd>
+      </dl>
+      <!--{/foreach}-->
+
+    </div>
+   
+  </div>
+
+</div>
+<!--{/if}-->
+
+
+
+
+

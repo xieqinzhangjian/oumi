@@ -1,0 +1,53 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="cate" id="cateList">
+		<div class="cate_hd"><h4 class="cate_hd_tit">搜索结果分类</h4></div>
+		<div class="cate_bd">
+			<!--{foreach from=$categories item=cat name=cat}-->
+			<div class="cate_item "  id="shoul_{$smarty.foreach.cat.index}">
+             <input type="hidden" name="fangshi1">
+				<div class="cate_tit">
+                <a class="cate_tit_a"  title="{$cat.name|escape:html}" href="{$cat.url}"><span class="cate_tit_name">{$cat.name|escape:html}</span></a>
+				<span class="cate_tit_ico" onClick="tab22({$smarty.foreach.cat.index});"></span>
+				</div>
+				<div class="cate_cnt" id="shohid_{$smarty.foreach.cat.index}" >
+				<!--{foreach from=$cat.cat_id item=child}-->
+                <a class="cate_lk " href="{$child.url}" title="{$child.name|escape:html}" ><span class="cate_lk_name">{$child.name|escape:html}</span></a>
+           
+            <!--{/foreach}-->
+</div>
+</div>
+<!--{/foreach}-->
+</div>
+		
+</div>
+<script>
+function tab22(num22)
+{
+
+	var fangshi1 = document.getElementsByName("fangshi1");
+	
+	for(var j = 0; j<fangshi1.length; j++){
+		if(j == num22)
+		{
+			
+			if(document.getElementById('shohid_'+j).style.display == "block")
+			{
+			document.getElementById('shohid_'+j).style.display="none";
+		document.getElementById('shoul_'+j).className="cate_item";
+			}
+			else
+			{
+			document.getElementById('shohid_'+j).style.display="block";
+		document.getElementById('shoul_'+j).className="cate_item cate_item_on";
+			}
+		
+		}
+		else
+		{
+	 	document.getElementById('shohid_'+j).style.display="none";
+		document.getElementById('shoul_'+j).className="cate_item";
+		}
+	}
+
+}
+</script>

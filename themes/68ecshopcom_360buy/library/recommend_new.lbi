@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="grid_m">
+  <div class="ftejia_goods_wrap">
+    <ul class="ftejia_goods">
+      <!--{foreach from=$new_goods item=goods}-->
+      <li class="">
+        <div class="mod_goods">
+          <div class="mod_goods_img load_effect"> <a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}"><img _src="{$goods.thumb}" /></a> </div>
+          <div class="mod_goods_info">
+            <p class="mod_goods_price"><span class="mod_price"><span><!-- {if $goods.promote_price neq ""} --> 
+              {$goods.shop_price} 
+              
+              <!-- {else}--> 
+              {$goods.shop_price} 
+              
+              <!--{/if}--></span></span></p>
+            <p class="mod_goods_tit"><a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+          </div>
+        </div>
+      </li>
+      <!--{/foreach}-->
+      
+    </ul>
+  </div>
+</div>

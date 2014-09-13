@@ -1,0 +1,133 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="ic_market" id="j_market">
+<div class="grid_c1">
+<a target="_blank" class="market_link" title="15期：林志炫" href="#" ><img src="images/icson/img/common/footerimg.jpg" class="market_img_1" /></a>
+</div>
+</div>
+<div class="ic_footer">
+	<div class="ic_footer_inner">
+		<div class="mod_agree">
+			<ul class="mod_agree_con">
+            <li class="mod_agree_item mod_agree_item1">
+					<i></i>
+					<a target="_blank" href="#" rel="nofollow"><strong>正品保障</strong><span>全场正品，行货保障</span></a>
+				</li>
+							<li class="mod_agree_item mod_agree_item2">
+					<i></i>
+					<a target="_blank" href="#"  rel="nofollow"><strong>一日三送</strong><span>闪电配送，谁比我快</span></a>
+				</li>
+							<li class="mod_agree_item mod_agree_item3">
+					<i></i>
+					<a target="_blank" href="#" rel="nofollow"><strong>货到付款</strong><span>货到付款，安心便捷</span></a>
+				</li>
+							<li class="mod_agree_item mod_agree_item4">
+					<i></i>
+					<a target="_blank" href="#" rel="nofollow"><strong>维修保障</strong><span>服务保证，全国联保</span></a>
+				</li>
+							<li class="mod_agree_item mod_agree_item5">
+					<i></i>
+					<a target="_blank" href="#" rel="nofollow"><strong>无忧退货</strong><span>无忧退货，7日尊享</span></a>
+				</li>
+							<li class="mod_agree_item mod_agree_item6">
+					<i></i>
+					<a target="_blank" href="#"  rel="nofollow"><strong>贵就赔</strong><span>质优价低，买贵就赔</span></a>
+				</li>
+						</ul>
+		</div>
+		<div class="mod_help">
+        <!-- {foreach from=$helps item=help_cat name=no} -->
+        <div class="mod_help_item">
+				<h5>{$help_cat.cat_name}</h5>
+				<ul>
+                <!-- {foreach from=$help_cat.article item=item} -->
+				<li><a target="_blank" href="help.php?id={$item.article_id}" rel="nofollow">{$item.short_title}</a></li><!-- {/foreach} --></ul>
+			</div>																									
+        <!-- {/foreach} -->
+        </div>
+		<div class="mod_way"><div class="mod_way_item mod_way_mb">
+				<i class="mod_way_mb_img"></i>
+				<div class="mod_way_mb_info">
+					<h5>手机易迅</h5>
+					<p>轻松易点，迅速到家！</p>
+					<p><a href="#" class="mod_way_mb_iphone">app store下载</a><a href="#"  class="mod_way_mb_android">android下载</a></p>
+				</div>
+			</div>
+			<div class="mod_way_item mod_way_wx">
+				<i class="mod_way_wx_img"></i>
+				<div class="mod_way_wx_info">
+					<h5>易迅官方微信</h5>
+					<p>扫描二维码，即刻与小易亲密互动，还有劲爆优惠等你来拿！</p>
+				</div>
+			</div>
+			<div class="mod_way_item mod_way_em">
+				<i class="mod_way_em_img"></i>
+				<div class="mod_way_em_info">
+					<h5>订阅QQ邮件</h5>
+					<p><a target="_blank" href="#" rel="nofollow">第一手促销资讯，尊享邮件特惠商品，优惠不错过！</a></p>
+				</div>
+			</div>
+
+			<div class="mod_way_item mod_way_wb">
+				<ul>
+					<li><span class="mod_way_wb_sina">易迅网官方新浪微博</span><a target="_blank" href="#" >立即关注</a></li>
+					<li><span class="mod_way_wb_tc">易迅网官方腾讯微博</span><a target="_blank" href="#">立即关注</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ic_subfooter"> <div class="grid_c1">
+        <div class="sf_p1"> <!-- {if $navigator_list.bottom} -->
+      <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+      <a href="{$nav.url}" 
+      <!-- {if $nav.opennew eq 1} -->
+      target="_blank"
+      <!-- {/if} -->
+      >{$nav.name}</a>|<!-- {/foreach} -->
+      <!-- {/if} --><span>客服热线：400-828-1878</span>
+        </div>
+        <p class="sf_p2">{$copyright}<br />
+      {$shop_address} {$shop_postcode}
+      <!-- 客服电话{if $service_phone} -->
+      Tel: {$service_phone}
+      <!-- 结束客服电话{/if} -->
+      <!-- 邮件{if $service_email} -->
+      E-mail: {$service_email}<br />
+      <!-- 结束邮件{/if} -->
+      <!-- QQ 号码 {foreach from=$qq item=im} -->
+      <!-- {if $im} -->
+      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束QQ号码 -->
+      <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
+      <!-- {if $im} -->
+      <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
+      <!-- {/if} -->
+      <!--{/foreach} 结束淘宝旺旺 -->
+      <!-- Yahoo Messenger {foreach from=$ym item=im} -->
+      <!-- {if $im} -->
+      <a href="http://edit.yahoo.com/config/send_webmesg?.target={$im}n&.src=pg" target="_blank"><img src="../images/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束Yahoo Messenger -->
+      <!-- MSN Messenger {foreach from=$msn item=im} -->
+      <!-- {if $im} -->
+      <img src="../images/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact={$im}">{$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束MSN Messenger -->
+      <!-- Skype {foreach from=$skype item=im} -->
+      <!-- {if $im} -->
+      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} -->
+      <br />
+      <!-- ICP 证书{if $icp_number} -->
+      {$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a><br />
+      <!-- 结束ICP 证书{/if} -->
+</p>
+        <div class="sf_verify" id="j_sf_verify">
+			<a target="_blank" class="sf_verify_lk_1" id="j_kx_verify" href="#">可信网站</a>
+            <a target="_blank" id="j_sh_verify" class="sf_verify_lk_2" href="#">上海工商</a>
+        </div>
+    </div>
+</div>
+

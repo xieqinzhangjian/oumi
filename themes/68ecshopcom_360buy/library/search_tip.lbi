@@ -1,0 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {foreach from=$logdb name="keyword_list" item=log} -->
+<div id="li_{$smarty.foreach.keyword_list.index}" onclick="setTip('{$log.word}');" onmouseover="this.className='search_t_div_2';" onmouseout="this.className='search_t_div_1';" class="search_t_div_1" title="{$log.word}"><span>{$log.items} 结果</span>{$log.kword}</div>
+<!-- {/foreach} -->

@@ -1,0 +1,10 @@
+<div class="slider" id="slider" style="position:relative;">
+  <ul style="LEFT: 0px; OVERFLOW: hidden; POSITION: absolute; TOP: 0px; HEIGHT: 330px">
+  <!--{foreach from=$flash name=myflash item=flash}--> 
+    <li style="FLOAT: left; WIDTH: 800px; HEIGHT: 330px"><a target="_blank" href="{$flash.url}" title="{$flash.name}" ><img src="{$flash.src}" alt="{$flash.name}"></a></li>
+  <!--{/foreach}--> 
+ </ul>
+  </div>
+
+
+

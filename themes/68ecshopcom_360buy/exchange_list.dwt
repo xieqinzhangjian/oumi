@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<script>var jdpts = new Object(); jdpts._st = new Date().getTime();</script>
+{insert_scripts files='common.js,global.js,compare.js'}
+{insert_scripts files='jquery-1.5.1.min.js'}
+{insert_scripts files='jquery.json.js,transport.js'} 
+<script type="text/javascript">
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/images/misc/201007/skin/df/plist20130808.css" media="all" />
+<link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/images/misc/contrast/skin/2012/pop_compare.css" media="all" />
+<script type="text/javascript">window.pageConfig = { compatible: true }; </script>
+<style>
+/* ======商品比较浮动块 ====== */
+
+#compareBox {
+	background: url(images/comparebox.gif) #fff no-repeat;
+	width: 140px;
+	position: absolute;
+	right: 1px;
+	top: 200px;
+	padding-top: 21px;
+}
+#compareBox input {
+	width: 140px;
+	height: 26px;
+	border: none;
+	background: url(images/compareSub.gif) no-repeat;
+}
+#compareList {
+	padding: 0px;
+	width: 138px;
+	background: #FFFFFF;
+	border: 1px solid #91b3cb;
+	padding-top: 5px;
+	border-bottom-color: #FFF;
+}
+#compareList li {
+	color: #333;
+	text-align: left;
+	background: #eff8ff;
+	padding: 3px 5px;
+	margin: 0 5px 5px 5px;
+	border: 1px solid #dceaf5;
+}
+#compareList li img {
+	float: right;
+	padding-top: 4px;
+}
+</style>
+</head><body>
+<script type="text/javascript" src="themes/68ecshopcom_360buy/images/misc/lib/js/2012/base-2011.js"></script> 
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> <div class="w">
+  <div class="breadcrumb"><!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem --></div>
+</div>
+ 
+
+<!--crumb end-->
+<div class="w main">
+  <div class="right-extra"> <!-- #BeginLibraryItem "/library/best_nei.lbi" --><!-- #EndLibraryItem --> 
+
+    <div style="height:0px; line-height:0px; clear:both;"></div>
+    <!-- #BeginLibraryItem "/library/exchange_list.lbi" --><!-- #EndLibraryItem --> 
+	<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+  <div class="left"> 
+    
+    <!-- 有关键字时导航聚类 --> 
+    <!-- #BeginLibraryItem "/library/category_tree.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- S 左侧导航(无关键词) --> 
+    
+
+    {if $hot_goods} 
+    <!--热销-->
+    <div class="tuan">
+    <div class="tuan_hd">
+      <h3 class="tuan_tit">热卖推荐</h3>
+    </div>
+    <div class="tuan_bd">
+      <div class="tuan_goods">
+        <ul>
+          <!--{foreach from=$hot_goods item=goods name=hot_goods}-->
+          <li class="tuan_goods_li" >
+            <div class="mod_goods">
+              <div class="mod_goods_img"><a  href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" title="{$goods.name|escape:html}"  width="120" height="120"></a> </div>
+              <div class="mod_goods_info">
+                <p class="mod_goods_promo" title="{$goods.act_title}">{$goods.act_title}</p>
+                <p class="mod_goods_tit"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+                <p class="mod_goods_price"><span class="mod_price"><span>{$goods.market_price}</span></span><span class="tuan_goods_oprice"><span><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></span></span></p>
+            </div>
+            </div>
+          </li>
+          
+          <!--{/foreach}-->
+        </ul>
+      </div>
+      <div class="tuan_more"><a target="_blank" href="search.php?intro=new" class="tuan_more_lk" >更多新品上架&gt;&gt;</a> </div>
+    </div>
+    </div>
+    {/if} 
+    {if $top_goods}
+    <div id="hotSell" class="recommend ">
+    <div class="recommend_hd">      <h3 class="recommend_tit">热销排行榜</h3>     </div>     <div class="recommend_bd">      <div class="recommend_goods">       <ul>
+     <!-- {foreach name=top_goods from=$top_goods item=goods}-->
+    <li class="recommend_goods_li" >
+    <div class="mod_goods mod_goods_w60"> 
+    <div class="mod_goods_img"> 
+    <a  class="img"  href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"> <img  src="{$goods.thumb}"  height="60" width="60"><span class="recommend_goods_rank">{$smarty.foreach.top_goods.iteration}</span></a></div>
+    <div class="mod_goods_info"><p class="mod_goods_tit"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_name}</a></p><p class="mod_goods_price"><span class="mod_price"><span>{$goods.price}</span></span></p>        </div>       </div>      </li>
+    <!-- {/foreach} -->
+    
+    
+    </ul>      </div>     </div>
+    </div>
+    {/if}
+    
+    <!--本周热销榜-->
+    
+    <!--最近浏览过-->
+  <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+  </div>
+  <!--left end-->
+  <div style="height:0px; line-height:0px; clear:both;"></div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

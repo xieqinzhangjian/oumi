@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="dailybeta" id="j_daily">
+  <div class="dailybeta_hd">
+    <p class="dailybeta_tit"><i class="dailybeta_tit_ico">&nbsp;</i><b>快来抢购，全网底价</b></p>
+    <a href="javascript:void(0);" class="dailybeta_change" id="j_daily_change" ytag="50000"><b>更多特价</b><i class="dailybeta_change_ico"></i></a> </div>
+  <div class="dailybeta_hd dailybeta_hd_next hide">
+    <p class="dailybeta_tit"><i class="dailybeta_tit_ico">&nbsp;</i><b>全民抢购，买到赚到</b></p>
+    <a href="javascript:void(0);" ytag="50101" class="dailybeta_change"><i class="dailybeta_change_ico"></i><b>返回抢购</b></a> </div>
+  <div class="dailybeta_bd" >
+    <ul class="dailybeta_goods" >
+      <!--{foreach from=$promotion_goods key=key item=goods name="promotion_foreach"}--> 
+      {if $smarty.foreach.promotion_foreach.iteration < 7}
+      <li class="dailybeta_goods_nobtn ">
+        <div class="mod_goods mod_goods_w100">
+        
+          <div class="mod_goods_img load_effect"> <span class="mod_goods_mark_1">立省<br>{$goods.jiesheng}元</span><a href="{$goods.url}" target="_blank" title=""><img _src="{$goods.thumb}" /></a> </div>
+          <div class="mod_goods_info">
+            <p <!-- {if $goods.promote_price neq ""} -->class="mod_goods_promo"<!--{else}-->class="mod_goods_tit"<!-- {/if}-->><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></p>
+            <p class="mod_goods_price"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><span class="mod_price mod_price_now"><i>&yen;</i><span>{$goods.promote_price}</span></span></a></p>
+            <p class="dailybeta_goods_btn_wrap"><a href="{$goods.url}" class="dailybeta_goods_btn"title="立即抢" ytag="{ytag}">立即抢</a></p>
+          </div>
+        </div>
+      </li>
+      {/if} 
+      <!--{/foreach}-->
+      
+    </ul>
+    <ul class="dailybeta_goods hide" >
+      <!--{foreach from=$promotion_goods key=key item=goods name="promotion_foreach"}--> 
+      {if $smarty.foreach.promotion_foreach.iteration > 6 && $smarty.foreach.promotion_foreach.iteration < 13 }
+      <li class="dailybeta_goods_nobtn ">
+        <div class="mod_goods mod_goods_w100">
+        
+          <div class="mod_goods_img load_effect"> <span class="mod_goods_mark_1">立省<br>{$goods.jiesheng}元</span><a href="{$goods.url}" target="_blank" title=""><img _src="{$goods.thumb}" /></a> </div>
+          <div class="mod_goods_info">
+            <p <!-- {if $goods.promote_price neq ""} -->class="mod_goods_promo"<!--{else}-->class="mod_goods_tit"<!-- {/if}-->><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></p>
+            <p class="mod_goods_price"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><span class="mod_price mod_price_now"><i>&yen;</i><span>{$goods.promote_price}</span></span></a></p>
+            <p class="dailybeta_goods_btn_wrap"><a href="{$goods.url}" class="dailybeta_goods_btn"title="立即抢" ytag="{ytag}">立即抢</a></p>
+          </div>
+        </div>
+      </li>
+      {/if} 
+      <!--{/foreach}-->
+    </ul>
+  </div>
+</div>

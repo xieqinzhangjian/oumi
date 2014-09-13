@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<link rel="stylesheet" href="themes/68ecshopcom_360buy/images/icson/css/channel/channel_tuan_new.css">
+<script language="javascript"> 
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+{* 包含脚本文件 *}
+{insert_scripts files='jquery-1.5.1.min.js'}
+{insert_scripts files='jquery.json.js,transport.js'} 
+{insert_scripts files='utils.js,common.js'}
+<script type="text/javascript">window.pageConfig = { compatible: true }; </script>
+</head>
+<body >
+<script type="text/javascript" src="themes/68ecshopcom_360buy/images/misc/lib/js/2012/base-2011.js"></script>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="w">
+<div class="t_pub_bd">
+	            	<!-- S tab切换 -->
+	            	<div class="t_tab">
+	                	<div class="t_tab_cons">
+	                    	<!-- S 内容1 -->
+	                    	<div class="t_tab_con">
+	                        	<ul class="t_pub_list2 clearfix">
+                                   <!--{foreach from=$goods_list item=goods name=name key=key}-->
+        <!--{if $goods.goods_name neq ''}-->
+        
+                                <li style="display:list-item;" onmouseover="this.className='on'" onmouseout="this.className=''"> 
+                                <a href="pro_goods.php?id={$goods.goods_id}" target="_blank" class="t_img" ytag="20089">                    <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}" height="200" width="200">                    <strong>{$goods.goods_name}</strong>                </a>                <p class="t_des_s1">{$goods.act_title}</p>                <div class="t_price">                    <p class="t_price_n"><strong><!--{if $goods.promote_price neq "" } -->
+            {$goods.promote_price}
+            <!--{else}-->
+            {$goods.shop_price}
+            <!--{/if}--></strong></p><p class="t_price_y"><del>{$goods.shop_price}</del></p>                </div>                <p class="t_num"><strong>{$goods.count1}</strong>人购买</p>                <b class="mod_goods_mark mod_goods_mark_bg1 mod_goods_mark_font1">{$goods.zhekou}折</b>            </li>
+         <!--{/if}-->
+        <!--{/foreach}-->            
+                                </ul>
+	                        </div>
+	                    	<!-- E 内容1 -->
+	                    </div>
+	                </div>
+	            	<!-- E tab切换 -->
+				</div>
+                <div style="height:10px; line-height:10px; clear:both;"></div>
+<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+
+</div>
+<div style="width:100%; background:#FFF ;  padding-top:20px;">
+ <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</div>
+</body>
+</html>

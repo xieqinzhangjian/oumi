@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{foreach from=$cat_goods item=goods}-->
+<li class="sy_mod_fgoods_low">
+  <div class="mod_goods mod_goods_w80" >
+    <div class="mod_goods_img load_effect"> <a target="_blank" href="{$goods.url}" title="{$goods.name|escape:html}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="80" height="80"></a> </div>
+    <div class="mod_goods_info">
+      <p <!-- {if $goods.promote_price neq ""} -->class="mod_goods_promo"<!--{else}-->class="mod_goods_tit"<!-- {/if}-->><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}" >{$goods.short_name|escape:html}</a></p>
+      <p class="mod_goods_price"><span class="mod_price"><span><!-- {if $goods.promote_price neq ""} -->
+         {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></span></p>
+    </div>
+  </div>
+</li>
+
+<!--{/foreach}-->

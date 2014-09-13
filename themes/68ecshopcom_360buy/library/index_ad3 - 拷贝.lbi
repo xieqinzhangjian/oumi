@@ -1,0 +1,67 @@
+<div class="slide" id="slide">
+			<script type="text/javascript">pageConfig.DATA_MSlide=[];
+		{foreach from=$flash name=myflash item=flash}pageConfig.DATA_MSlide.push({width:670,height:240,href:"{$flash.url}",alt:"{$flash.text|escape:html}",src:"{$flash.src}",widthB:550,heightB:240,srcB:"{$flash.src}"});pageConfig.DATA_MSlide.push({width:670,height:240,href:"{$flash.url}",alt:"{$flash.name}",src:"{$flash.src}",widthB:550,heightB:240,srcB:"{$flash.src}"});
+{/foreach}			
+			
+			(function(object,data){var a=data,b=[],c=[];while(a.length>0){b=[];b.push(a.shift());if(a.length){b.push(a.shift())};c.push(b)};for(var i=0;i<c.length;i++){c[i].sort(function(a,b){return(b.ext-a.ext)||(0.5-Math.random())});a.push(c[i][0])};var x=pageConfig.FN_GetCompatibleData(a[0]),e=[];e.push("<ul class=\"slide-items\"><li clstag=\"homepage|keycount|home2012|09a1\"><a target=\"_blank\" href=\"");e.push(x.href);e.push("\" title=\"");e.push(x.alt);e.push("\"><img src=\"");e.push(x.src);e.push("\" width=\"");e.push(x.width);e.push("\" height=\"");e.push(x.height);e.push("\" /></a></li></ul><div class=\"slide-controls\"><span class=\"curr\">1</span></div>");document.getElementById(object).innerHTML=e.join("");pageConfig.DATA_MSlide=a})("slide",pageConfig.DATA_MSlide);</script>		</div><!--slide end-->
+		<div class="jscroll" id="mscroll">
+			<div class="ctrl" id="mscroll-ctrl-prev"><b></b></div>
+			<div class="ctrl" id="mscroll-ctrl-next"><b></b></div>
+			<div class="o-list">
+				<div class="list" id="mscroll-list"></div>
+			</div>
+		</div><!--mscroll end-->
+        
+        	<?php
+		 $GLOBALS['smarty']->assign('index_lit_img',get_advlist('首页幻灯片-小图', 15));
+	  ?>
+  <script type="text/javascript">
+pageConfig.DATA_MScroll=[{foreach from=$index_lit_img item=ad name=index_image}{alt:"{$ad.name}",href:"{$ad.url}",index:{$smarty.foreach.index_image.index},src:"{$ad.image}",ext:""},{/foreach}{foreach from=$index_lit_img item=ad name=index_image}
+{if $smarty.foreach.index_image.index == 0}
+{alt:"{$ad.name}",href:"{$ad.url}",index:15,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 1}
+{alt:"{$ad.name}",href:"{$ad.url}",index:16,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 2}
+{alt:"{$ad.name}",href:"{$ad.url}",index:17,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 3}
+{alt:"{$ad.name}",href:"{$ad.url}",index:18,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 4}
+{alt:"{$ad.name}",href:"{$ad.url}",index:19,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 5}
+{alt:"{$ad.name}",href:"{$ad.url}",index:20,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 6}
+{alt:"{$ad.name}",href:"{$ad.url}",index:21,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 7}
+{alt:"{$ad.name}",href:"{$ad.url}",index:22,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 8}
+{alt:"{$ad.name}",href:"{$ad.url}",index:23,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 9}
+{alt:"{$ad.name}",href:"{$ad.url}",index:24,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 10}
+{alt:"{$ad.name}",href:"{$ad.url}",index:25,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 11}
+{alt:"{$ad.name}",href:"{$ad.url}",index:26,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 12}
+{alt:"{$ad.name}",href:"{$ad.url}",index:27,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 13}
+{alt:"{$ad.name}",href:"{$ad.url}",index:28,src:"{$ad.image}",ext:""},
+{/if}
+{if $smarty.foreach.index_image.index == 14}
+{alt:"{$ad.name}",href:"{$ad.url}",index:29,src:"{$ad.image}",ext:""}
+{/if}{/foreach}];(function(object,data){var a=data,b=[],c=[],d;a.sort(function(a,b){return b.ext-a.ext});while(a.length>0){d=a.shift();if(d.ext){b.push(d)}else{c.push(d)}}b.sort(function(){return 0.5-Math.random()});c.sort(function(){return 0.5-Math.random()});if(b.length>=3){for(var i=0;i<3;i++){a.push(b.shift())}}else{for(var i=0;i<b.length;i++){a.push(b.shift())}}var f=a.length,g=c.length;for(var i=0;i<18-f;i++){if(i>g-1){continue}a.push(c.shift())}var e=[],x;e.push("<ul class=\"lh\">");for(var i=0;i<3;i++){x=pageConfig.FN_GetCompatibleData(a[i]);e.push("<li class=\"item\"><a href=\"");e.push(x.href);e.push("\"><img src=\"#/lib/img/e/blank.gif\" style=\"background:url(");e.push(x.src);e.push(") no-repeat #fff center 0;\" alt=\"");e.push(x.alt);e.push("\" width=\"");e.push(x.width);e.push("\" height=\"");e.push(x.height);e.push("\" /></a></li>")}e.push("</ul>");document.getElementById(object).innerHTML=e.join("");pageConfig.DATA_MScroll=a})("mscroll-list",pageConfig.DATA_MScroll);
+
+</script>	
+<div style="clear:both;"></div>

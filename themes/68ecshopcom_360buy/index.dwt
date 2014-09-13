@@ -1,0 +1,1123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="alternate" type="application/rss+xml"
+	title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+<script language="javascript">
+<!--
+	/*屏蔽所有的js错误*/
+	function killerrors() {
+		return true;
+	}
+	window.onerror = killerrors;
+//-->
+</script>
+<script type="text/javascript">
+	timeStat = [];
+	timeStat[0] = new Date();
+	window.fstfs = [ 300020, 300033 ];
+	document.domain = '';
+</script>
+<link rel="stylesheet"
+	href="themes/68ecshopcom_360buy/images/icson/css/common/gb.css"
+	type="text/css" media="screen" />
+<link rel="stylesheet"
+	href="themes/68ecshopcom_360buy/images/icson/css/index/index.css"
+	type="text/css" media="screen" />
+</head>
+<body class="ic_rwd">
+	<style type="text/css" media="screen">
+.ic_header {
+	background:
+		url(themes/68ecshopcom_360buy/images/icson/img/event/140102_newyear/bg1.png)
+		no-repeat 50% bottom #FFFFFF;
+	_background-image: none;
+}
+
+.ic_nav {
+	border-top: none;
+	background:
+		url(themes/68ecshopcom_360buy/images/icson/img/event/140102_newyear/bg2.png)
+		no-repeat 50% 0 #1369c0;
+	_border-top: 1px solid #135dbc;
+	_background-image: none;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.core {
+	background:
+		url(themes/68ecshopcom_360buy/images/icson/img/event/140102_newyear/bg2.png)
+		no-repeat 50% -39px;
+	_background-image: none;
+}
+
+.ic_nav .grid_c1 {
+	position: relative;
+}
+
+.ic_mini .ic_header,.ic_mini .ic_nav,.ic_mini .core {
+	background-image: none;
+	border-top: 1px solid #135dbc;
+}
+</style>
+
+	<!-- #BeginLibraryItem "/library/page_headerindex.lbi" -->
+	<!-- #EndLibraryItem -->
+	<script type="text/javascript"
+		src="themes/68ecshopcom_360buy/js/main.js" charset="utf-8"></script>
+
+	<div class="ic_content">
+		<div class="core">
+			<div class="grid_c1">
+				<div class="grid_s"></div>
+				<div class="grid_m">
+					<!-- #BeginLibraryItem "/library/index_ad3.lbi" -->
+					<!-- #EndLibraryItem -->
+					<script type="text/javascript"
+						src="themes/68ecshopcom_360buy/images/icson/js/index/script.js"
+						charset="utf-8"></script>
+					<i class="daily_bod"></i>
+				
+
+				</div>
+
+				<div class="grid_e" style="float: left;margin-left: 1200px;margin-top: -370px;">
+					<div class="serv">
+						<i class="serv_bod"></i>
+						<div class="serv_bd">
+							<div class="serv_glide">
+								<ul class="serv_glide_img" id="j_serv_glide">
+									<li class="">
+										<!-- TemplateBeginEditable name="首页-banner右侧小广告1" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+										{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+										<!-- TemplateEndEditable -->
+									</li>
+									<li class="hide">
+										<!-- TemplateBeginEditable name="首页-banner右侧小广告2" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+										{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+										<!-- TemplateEndEditable -->
+									</li>
+									<li class="hide">
+										<!-- TemplateBeginEditable name="首页-banner右侧小广告3" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+										{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+										<!-- TemplateEndEditable -->
+									</li>
+									<li class="hide">
+										<!-- TemplateBeginEditable name="首页-banner右侧小广告4" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+										{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+										<!-- TemplateEndEditable -->
+									</li>
+								</ul>
+								<div class="serv_glide_trig hide" id="j_glide_trig">
+									<p>&bull;</p>
+									<p>&bull;</p>
+									<p>&bull;</p>
+									<p>&bull;</p>
+								</div>
+							</div>
+						</div>
+						<div class="serv_ft">
+							<!-- #BeginLibraryItem "/library/morefuwu.lbi" -->
+
+							<!-- #EndLibraryItem -->
+						</div>
+					</div>
+					<!-- TemplateBeginEditable name="商店公告" -->
+					<!-- #BeginLibraryItem "/library/cat_articles.lbi" -->
+
+					<div class="notice">
+						<div class="notice_hd">
+							<div class="notice_tit">公告</div>
+							<div class="notice_go hide" id="j_nbtn">
+								<i class="notice_go_prev" id="j_nprev">&lt;</i> <i
+									class="notice_go_next" id="j_nnext">&gt;</i>
+							</div>
+						</div>
+						<div class="notice_bd">
+
+							<!--{foreach from=$articles item=article_item name=name}-->
+							{if $smarty.foreach.name.first}
+							<ul class="notice_list" id="j_notice">
+								{/if} {if $smarty.foreach.name.iteration<3}
+								<li><a target="_blank" href="{$article_item.url}"
+									title="{$article_item.title}">{$article_item.short_title}</a></li>
+								{/if} {if $smarty.foreach.name.iteration eq 2}
+							</ul>
+							{/if} {if $smarty.foreach.name.iteration eq 3}
+							<ul class="notice_list hide" id="j_notice">
+								{/if} {if $smarty.foreach.name.iteration>2 &&
+								$smarty.foreach.name.iteration<5}
+								<li><a target="_blank" href="{$article_item.url}"
+									title="{$article_item.title}">{$article_item.short_title}</a></li>
+								{/if} {if $smarty.foreach.name.iteration eq 4}
+							</ul>
+							{/if} {if $smarty.foreach.name.iteration eq 5}
+							<ul class="notice_list hide" id="j_notice">
+								{/if} {if $smarty.foreach.name.iteration>4 &&
+								$smarty.foreach.name.iteration<7}
+								<li><a target="_blank" href="{$article_item.url}"
+									title="{$article_item.title}">{$article_item.short_title}</a></li>
+								{/if} {if $smarty.foreach.name.iteration eq 6}
+							</ul>
+							{/if} {if $smarty.foreach.name.iteration eq 7}
+							<ul class="notice_list hide" id="j_notice">
+								{/if} {if $smarty.foreach.name.iteration>6 &&
+								$smarty.foreach.name.iteration<9}
+								<li><a target="_blank" href="{$article_item.url}"
+									title="{$article_item.title}">{$article_item.short_title}</a></li>
+								{/if} {if $smarty.foreach.name.iteration eq 8}
+							</ul>
+							{/if}
+							<!--{/foreach}-->
+
+						</div>
+					</div>
+
+
+
+					<!-- #EndLibraryItem -->
+					<!-- TemplateEndEditable -->
+
+					<!-- #BeginLibraryItem "/library/shouji.lbi" -->
+					<!-- #EndLibraryItem -->
+
+					<div class="chong_frm">
+						<!-- TemplateBeginEditable name="首页-公告下广告图" -->
+						<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+						{insert name='ads' id=$ads_id num=$ads_num}
+						<!-- #EndLibraryItem -->
+						<!-- TemplateEndEditable -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript"
+			src="themes/68ecshopcom_360buy/images/icson/js/indexok.js"
+			charset="utf-8"></script>
+		<div id="tfs_1"></div>
+		<div class="grid_c1 ulike ">
+			<div class="ulike_hd">
+				<div class="ulike_tit">猜你喜欢</div>
+				<a target="_blank" id="j_ulike_gg" class="ulike_gg"
+					href="search.php?intro=best">点击查看更多精彩！&gt;&gt;</a>
+			</div>
+			<div class="ulike_bd" id="ulikeS1">
+				<ul class="ulike_r1">
+					<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+					<!-- #EndLibraryItem -->
+					<li class="ulike_r1_narrow">
+						<div class="ulike_r1_brand">
+							<!-- TemplateBeginEditable name="猜你喜欢小图广告1" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div>
+					</li>
+					<li class="ulike_r1_mark_wrap">
+						<div class="ulike_r1_brand">
+							<!-- TemplateBeginEditable name="猜你喜欢小图广告2" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div>
+					</li>
+					<li class="ulike_r1_mark_wrap">
+						<div class="ulike_r1_brand">
+							<!-- TemplateBeginEditable name="猜你喜欢小图广告3" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div>
+					</li>
+					<li>
+						<div class="ulike_r1_brand">
+							<!-- TemplateBeginEditable name="猜你喜欢小图广告4" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div>
+					</li>
+					<li>
+						<div class="ulike_r1_brand">
+							<!-- TemplateBeginEditable name="猜你喜欢小图广告5" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div>
+					</li>
+					<li>
+						<div class="ulike_r1_brand">
+							<!-- TemplateBeginEditable name="猜你喜欢小图广告6" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div>
+					</li>
+
+				</ul>
+				<ul class="ulike_r2">
+					<li class="ulike_r2_narrow">
+						<div class="ulike_r2_item">
+							<!-- TemplateBeginEditable name="猜你喜欢大图广告1" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div>
+					</li>
+					<li><div class="ulike_r2_item">
+							<!-- TemplateBeginEditable name="猜你喜欢大图广告2" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div></li>
+					<li><div class="ulike_r2_item">
+							<!-- TemplateBeginEditable name="猜你喜欢大图广告3" -->
+							<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+							{insert name='ads' id=$ads_id num=$ads_num}
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</div></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="grid_c1 sy_mod_f f1">
+			<div class="sy_mod_f_hd">
+				<!-- #BeginLibraryItem "/library/title1.lbi" -->
+				<!-- #EndLibraryItem -->
+			</div>
+			<div class="sy_mod_f_bd">
+				<div class="grid_s MMSlides">
+					<div class="sy_mod_glide slide-pic_index">
+						<ul class="sy_mod_glide_img slide-pic">
+							<?php
+		 $GLOBALS['smarty']->assign('index_image1',get_advlist('首页-1f-左侧广告', 4));
+	  ?>
+							{foreach from=$index_image1 item=ad name=index_image}
+							<li><a href="{$ad.url}" target="_blank"><img
+									src="{$ad.image}" width="190" height="400"></a></li> {/foreach}
+						</ul>
+						<div class="sy_mod_glide_trigger slide-txt">
+							{foreach from=$index_image1 item=ad name=index_image}<i>•</i>{/foreach}
+						</div>
+					</div>
+
+				</div>
+
+				<div class="grid_m">
+					<div class="sy_mod_fgoods_wrap">
+						<ul class="sy_mod_fgoods">
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-1f-中间广告1" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-1f-中间广告2" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-1f-中间广告3" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-1f-中间广告4" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+
+							<!-- TemplateBeginEditable name="首页-1f商品分类" -->
+							<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+							<!--{foreach from=$cat_goods item=goods}-->
+							<li class="sy_mod_fgoods_low">
+								<div class="mod_goods mod_goods_w80">
+									<div class="mod_goods_img load_effect">
+										<a target="_blank" href="{$goods.url}"
+											title="{$goods.name|escape:html}"><img
+											src="{$goods.thumb}" alt="{$goods.name|escape:html}"
+											width="80" height="80"></a>
+									</div>
+									<div class="mod_goods_info">
+										<p
+											<!-- {if $goods.promote_price neq ""} -->
+											class="mod_goods_promo"
+											<!--{else}-->
+											class="mod_goods_tit"
+											<!-- {/if}-->
+											><a href="{$goods.url}" target="_blank"
+												title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a>
+										</p>
+										<p class="mod_goods_price">
+											<span class="mod_price"><span> <!-- {if $goods.promote_price neq ""} -->
+													{$goods.promote_price} <!-- {else}--> {$goods.shop_price} <!--{/if}-->
+											</span></span>
+										</p>
+									</div>
+								</div>
+							</li>
+
+							<!--{/foreach}-->
+
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+
+						</ul>
+					</div>
+				</div>
+				<div class="grid_e">
+					<div class="sy_mod_extimg">
+						<!-- TemplateBeginEditable name="首页-1f-右侧广告" -->
+						<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+						{insert name='ads' id=$ads_id num=$ads_num}
+						<!-- #EndLibraryItem -->
+						<!-- TemplateEndEditable -->
+					</div>
+				</div>
+			</div>
+			<!-- #BeginLibraryItem "/library/hot_goods1.lbi" -->
+			<!-- #EndLibraryItem -->
+		</div>
+		<div class="grid_c1 sy_mod_f f2">
+
+			<div class="sy_mod_f_hd">
+				<!-- #BeginLibraryItem "/library/title2.lbi" -->
+				<!-- #EndLibraryItem -->
+			</div>
+			<div class="sy_mod_f_bd">
+				<div class="grid_s MMSlides">
+					<div class="sy_mod_glide slide-pic_index">
+						<ul class="sy_mod_glide_img slide-pic">
+							<?php
+		 $GLOBALS['smarty']->assign('index_image2',get_advlist('首页-2f-左侧广告', 4));
+	  ?>
+							{foreach from=$index_image2 item=ad name=index_image}
+							<li><a href="{$ad.url}" target="_blank"><img
+									src="{$ad.image}" width="190" height="520"></a></li> {/foreach}
+						</ul>
+						<div class="sy_mod_glide_trigger slide-txt">
+							{foreach from=$index_image2 item=ad name=index_image}<i>•</i>{/foreach}
+						</div>
+					</div>
+				</div>
+				<div class="grid_m">
+					<div class="sy_mod_fgoods_wrap">
+						<ul class="sy_mod_fgoods">
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-2f-中间广告1" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-2f-中间广告2" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-2f-中间广告3" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-2f-中间广告4" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+
+							<!-- TemplateBeginEditable name="首页-2f商品分类" -->
+							<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+							<!--{foreach from=$cat_goods item=goods}-->
+							<li class="sy_mod_fgoods_low">
+								<div class="mod_goods mod_goods_w80">
+									<div class="mod_goods_img load_effect">
+										<a target="_blank" href="{$goods.url}"
+											title="{$goods.name|escape:html}"><img
+											src="{$goods.thumb}" alt="{$goods.name|escape:html}"
+											width="80" height="80"></a>
+									</div>
+									<div class="mod_goods_info">
+										<p
+											<!-- {if $goods.promote_price neq ""} -->
+											class="mod_goods_promo"
+											<!--{else}-->
+											class="mod_goods_tit"
+											<!-- {/if}-->
+											><a href="{$goods.url}" target="_blank"
+												title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a>
+										</p>
+										<p class="mod_goods_price">
+											<span class="mod_price"><span> <!-- {if $goods.promote_price neq ""} -->
+													{$goods.promote_price} <!-- {else}--> {$goods.shop_price} <!--{/if}-->
+											</span></span>
+										</p>
+									</div>
+								</div>
+							</li>
+
+							<!--{/foreach}-->
+
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+
+						</ul>
+					</div>
+				</div>
+				<div class="grid_e">
+					<div class="sy_mod_extimg">
+						<div class="flider">
+							<div class="flider_img" id="j_fslider">
+								<?php
+		 $GLOBALS['smarty']->assign('index_image',get_advlist('首页-2f-右侧广告', 3));
+	  ?>
+								{foreach from=$index_image item=ad name=index_image} <a
+									class="{if !$smarty.foreach.index_image.first}hide{/if}"
+									target="_blank" href="{$ad.url}" title="{$ad.title}"><img
+									src="{$ad.image}" alt="{$ad.name}"></a> {/foreach}
+
+
+							</div>
+							<div class="flider_trigger" id="j_fslider_trigger">
+								{foreach from=$index_image item=ad name=index_image} <a
+									class="flider_trigger_lk {if $smarty.foreach.index_image.first}flider_trigger_lk_on{/if}"
+									href="{$ad.url}" target="_blank"><b>{$ad.name}</b><i>&gt;</i></a>
+								{/foreach}
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- #BeginLibraryItem "/library/hot_goods2.lbi" -->
+			<!-- #EndLibraryItem -->
+		</div>
+		<div class="grid_c1 sy_mod_f f3">
+			<div class="sy_mod_f_hd">
+				<!-- #BeginLibraryItem "/library/title3.lbi" -->
+				<!-- #EndLibraryItem -->
+			</div>
+			<div class="sy_mod_f_bd">
+				<div class="grid_s MMSlides">
+					<div class="sy_mod_glide slide-pic_index">
+						<ul class="sy_mod_glide_img slide-pic">
+							<?php
+		 $GLOBALS['smarty']->assign('index_image3',get_advlist('首页-3f-左侧广告', 4));
+	  ?>
+							{foreach from=$index_image3 item=ad name=index_image}
+							<li><a href="{$ad.url}" target="_blank"><img
+									src="{$ad.image}" width="190" height="400"></a></li> {/foreach}
+						</ul>
+						<div class="sy_mod_glide_trigger slide-txt">
+							{foreach from=$index_image3 item=ad name=index_image}<i>•</i>{/foreach}
+						</div>
+					</div>
+				</div>
+				<div class="grid_m">
+					<div class="sy_mod_fgoods_wrap">
+						<ul class="sy_mod_fgoods">
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-3f-中间广告1" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-3f-中间广告2" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页3f-中间广告3" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-3f-中间广告4" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+
+							<!-- TemplateBeginEditable name="首页-3f商品分类" -->
+							<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+							<!--{foreach from=$cat_goods item=goods}-->
+							<li class="sy_mod_fgoods_low">
+								<div class="mod_goods mod_goods_w80">
+									<div class="mod_goods_img load_effect">
+										<a target="_blank" href="{$goods.url}"
+											title="{$goods.name|escape:html}"><img
+											src="{$goods.thumb}" alt="{$goods.name|escape:html}"
+											width="80" height="80"></a>
+									</div>
+									<div class="mod_goods_info">
+										<p
+											<!-- {if $goods.promote_price neq ""} -->
+											class="mod_goods_promo"
+											<!--{else}-->
+											class="mod_goods_tit"
+											<!-- {/if}-->
+											><a href="{$goods.url}" target="_blank"
+												title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a>
+										</p>
+										<p class="mod_goods_price">
+											<span class="mod_price"><span> <!-- {if $goods.promote_price neq ""} -->
+													{$goods.promote_price} <!-- {else}--> {$goods.shop_price} <!--{/if}-->
+											</span></span>
+										</p>
+									</div>
+								</div>
+							</li>
+
+							<!--{/foreach}-->
+
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+
+						</ul>
+					</div>
+				</div>
+				<div class="grid_e">
+					<div class="sy_mod_extimg">
+						<!-- TemplateBeginEditable name="首页-3f-右侧广告" -->
+						<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+						{insert name='ads' id=$ads_id num=$ads_num}
+						<!-- #EndLibraryItem -->
+						<!-- TemplateEndEditable -->
+					</div>
+				</div>
+			</div>
+			<!-- #BeginLibraryItem "/library/hot_goods3.lbi" -->
+			<!-- #EndLibraryItem -->
+		</div>
+
+		<div class="grid_c1 sy_mod_f fgeneral">
+
+			<div class="sy_mod_f_hd">
+				<!-- #BeginLibraryItem "/library/title4.lbi" -->
+				<!-- #EndLibraryItem -->
+			</div>
+			<div class="sy_mod_f_bd">
+				<div class="grid_s MMSlides">
+					<div class="sy_mod_glide slide-pic_index">
+						<ul class="sy_mod_glide_img slide-pic">
+							<?php
+		 $GLOBALS['smarty']->assign('index_image4',get_advlist('首页-4f-左侧广告', 4));
+	  ?>
+							{foreach from=$index_image4 item=ad name=index_image}
+							<li><a href="{$ad.url}" target="_blank"><img
+									src="{$ad.image}" width="190" height="400"></a></li> {/foreach}
+						</ul>
+						<div class="sy_mod_glide_trigger slide-txt">
+							{foreach from=$index_image4 item=ad name=index_image}<i>•</i>{/foreach}
+						</div>
+					</div>
+				</div>
+
+				<div class="grid_m">
+					<div class="sy_mod_fgoods_wrap">
+						<ul class="sy_mod_fgoods">
+
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-4f-中间广告1" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-4f-中间广告2" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-4f-中间广告3" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-4f-中间广告4" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-4f-中间广告5" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-4f-中间广告6" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-4f-中间广告7" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-4f-中间广告8" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="grid_e">
+					<div class="sy_mod_extimg">
+						<!-- TemplateBeginEditable name="首页-4f-右侧广告" -->
+						<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+						{insert name='ads' id=$ads_id num=$ads_num}
+						<!-- #EndLibraryItem -->
+						<!-- TemplateEndEditable -->
+					</div>
+				</div>
+			</div>
+			<!-- #BeginLibraryItem "/library/hot_goods4.lbi" -->
+			<!-- #EndLibraryItem -->
+
+		</div>
+		<div class="grid_c1 sy_mod_f fpopular">
+
+			<div class="sy_mod_f_hd">
+				<!-- #BeginLibraryItem "/library/title5.lbi" -->
+				<!-- #EndLibraryItem -->
+
+			</div>
+			<div class="sy_mod_f_bd">
+				<div class="grid_s MMSlides">
+					<div class="sy_mod_glide">
+						<ul class="sy_mod_glide_img slide-pic">
+							<?php
+		 $GLOBALS['smarty']->assign('index_image5',get_advlist('首页-5f-左侧广告', 4));
+	  ?>
+							{foreach from=$index_image5 item=ad name=index_image}
+							<li><a href="{$ad.url}" target="_blank"><img
+									src="{$ad.image}" width="190" height="400"></a></li> {/foreach}
+						</ul>
+						<div class="sy_mod_glide_trigger slide-txt">
+							{foreach from=$index_image5 item=ad name=index_image}<i>•</i>{/foreach}
+						</div>
+					</div>
+				</div>
+				<div class="grid_m">
+					<div class="sy_mod_fgoods_wrap">
+						<ul class="sy_mod_fgoods">
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-5f-中间广告1" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-5f-中间广告2" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-5f-中间广告3" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+							<li class="sy_mod_fgoods_high">
+								<!-- TemplateBeginEditable name="首页-5f-中间广告4" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+								{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+								<!-- TemplateEndEditable -->
+							</li>
+
+							<!-- TemplateBeginEditable name="首页-5f商品分类" -->
+							<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+							<!--{foreach from=$cat_goods item=goods}-->
+							<li class="sy_mod_fgoods_low">
+								<div class="mod_goods mod_goods_w80">
+									<div class="mod_goods_img load_effect">
+										<a target="_blank" href="{$goods.url}"
+											title="{$goods.name|escape:html}"><img
+											src="{$goods.thumb}" alt="{$goods.name|escape:html}"
+											width="80" height="80"></a>
+									</div>
+									<div class="mod_goods_info">
+										<p
+											<!-- {if $goods.promote_price neq ""} -->
+											class="mod_goods_promo"
+											<!--{else}-->
+											class="mod_goods_tit"
+											<!-- {/if}-->
+											><a href="{$goods.url}" target="_blank"
+												title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a>
+										</p>
+										<p class="mod_goods_price">
+											<span class="mod_price"><span> <!-- {if $goods.promote_price neq ""} -->
+													{$goods.promote_price} <!-- {else}--> {$goods.shop_price} <!--{/if}-->
+											</span></span>
+										</p>
+									</div>
+								</div>
+							</li>
+
+							<!--{/foreach}-->
+
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+
+						</ul>
+					</div>
+				</div>
+				<div class="grid_e">
+					<div class="sy_mod_extimg">
+						<!-- TemplateBeginEditable name="首页-5f-右侧广告" -->
+						<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+						{insert name='ads' id=$ads_id num=$ads_num}
+						<!-- #EndLibraryItem -->
+						<!-- TemplateEndEditable -->
+					</div>
+				</div>
+			</div>
+			<!-- #BeginLibraryItem "/library/hot_goods5.lbi" -->
+			<!-- #EndLibraryItem -->
+
+		</div>
+		<div class="grid_c1 sy_mod_f ftwin">
+			<div class="sy_mod_f_hd">
+				<!-- #BeginLibraryItem "/library/title6.lbi" -->
+				<!-- #EndLibraryItem -->
+
+			</div>
+			<div class="sy_mod_f_bd grid_s5m10 ">
+				<div class="grid_s MMSlides">
+					<div class="ftwin_side">
+						<div class="sy_mod_glide">
+							<ul class="sy_mod_glide_img">
+								<li>
+									<!-- TemplateBeginEditable name="首页-6f-广告1" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+									{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+									<!-- TemplateEndEditable -->
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="grid_m_1">
+					<div class="ftwin_goods_wrap">
+						<ul class="ftwin_goods">
+							<!-- TemplateBeginEditable name="首页-6f-商品列表1" -->
+							<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+							<!--{foreach from=$cat_goods item=goods}-->
+							<li class="sy_mod_fgoods_low">
+								<div class="mod_goods mod_goods_w80">
+									<div class="mod_goods_img load_effect">
+										<a target="_blank" href="{$goods.url}"
+											title="{$goods.name|escape:html}"><img
+											src="{$goods.thumb}" alt="{$goods.name|escape:html}"
+											width="80" height="80"></a>
+									</div>
+									<div class="mod_goods_info">
+										<p
+											<!-- {if $goods.promote_price neq ""} -->
+											class="mod_goods_promo"
+											<!--{else}-->
+											class="mod_goods_tit"
+											<!-- {/if}-->
+											><a href="{$goods.url}" target="_blank"
+												title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a>
+										</p>
+										<p class="mod_goods_price">
+											<span class="mod_price"><span> <!-- {if $goods.promote_price neq ""} -->
+													{$goods.promote_price} <!-- {else}--> {$goods.shop_price} <!--{/if}-->
+											</span></span>
+										</p>
+									</div>
+								</div>
+							</li>
+
+							<!--{/foreach}-->
+
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</ul>
+					</div>
+				</div>
+				<i class="grid_g1"></i>
+				<div class="grid_s">
+					<div class="ftwin_side">
+						<div class="sy_mod_glide">
+							<ul class="sy_mod_glide_img">
+								<li>
+									<!-- TemplateBeginEditable name="首页-6f-广告2" --> <!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+									{insert name='ads' id=$ads_id num=$ads_num} <!-- #EndLibraryItem -->
+									<!-- TemplateEndEditable -->
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+				<div class="grid_m_2">
+					<div class="ftwin_goods_wrap">
+						<ul class="ftwin_goods">
+							<!-- TemplateBeginEditable name="首页-6f-商品列表2" -->
+							<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+							<!--{foreach from=$cat_goods item=goods}-->
+							<li class="sy_mod_fgoods_low">
+								<div class="mod_goods mod_goods_w80">
+									<div class="mod_goods_img load_effect">
+										<a target="_blank" href="{$goods.url}"
+											title="{$goods.name|escape:html}"><img
+											src="{$goods.thumb}" alt="{$goods.name|escape:html}"
+											width="80" height="80"></a>
+									</div>
+									<div class="mod_goods_info">
+										<p
+											<!-- {if $goods.promote_price neq ""} -->
+											class="mod_goods_promo"
+											<!--{else}-->
+											class="mod_goods_tit"
+											<!-- {/if}-->
+											><a href="{$goods.url}" target="_blank"
+												title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a>
+										</p>
+										<p class="mod_goods_price">
+											<span class="mod_price"><span> <!-- {if $goods.promote_price neq ""} -->
+													{$goods.promote_price} <!-- {else}--> {$goods.shop_price} <!--{/if}-->
+											</span></span>
+										</p>
+									</div>
+								</div>
+							</li>
+
+							<!--{/foreach}-->
+
+							<!-- #EndLibraryItem -->
+							<!-- TemplateEndEditable -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid_c1 sy_mod_f ftejia">
+			<div class="sy_mod_f_hd">
+				<!-- #BeginLibraryItem "/library/title7.lbi" -->
+				<!-- #EndLibraryItem -->
+
+			</div>
+			<div class="sy_mod_f_bd grid_s5m25">
+				<div class="grid_s">
+					<div class="ftejia_side">
+						<!-- TemplateBeginEditable name="首页-7f-广告" -->
+						<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+						{insert name='ads' id=$ads_id num=$ads_num}
+						<!-- #EndLibraryItem -->
+						<!-- TemplateEndEditable -->
+					</div>
+				</div>
+				<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
+				<!-- #EndLibraryItem -->
+			</div>
+		</div>
+	</div>
+	<!-- #BeginLibraryItem "/library/page_footer.lbi" -->
+	<!-- #EndLibraryItem -->
+
+	<script type="text/javascript">
+		timeStat[2] = new Date() - timeStat[0];
+		window.tfList = [ {
+			'tfId' : '300034',
+			'lazyDo' : 'qbTomorrow'
+		}, {
+			'tfId' : '300021',
+			'lazyDo' : ''
+		}, {
+			'tfId' : '300022',
+			'lazyDo' : ''
+		}, {
+			'tfId' : '300023',
+			'lazyDo' : ''
+		}, {
+			'tfId' : '300024',
+			'lazyDo' : ''
+		}, {
+			'tfId' : '300025',
+			'lazyDo' : ''
+		}, {
+			'tfId' : '300027',
+			'lazyDo' : 'hsTabs'
+		}, {
+			'tfId' : '300028',
+			'lazyDo' : 'hsTabs'
+		}, {
+			'tfId' : '300029',
+			'lazyDo' : 'hsTabs'
+		}, {
+			'tfId' : '300030',
+			'lazyDo' : 'hsTabs'
+		}, {
+			'tfId' : '300031',
+			'lazyDo' : ''
+		}, {
+			'tfId' : '300032',
+			'lazyDo' : 'hsTabs'
+		} ];
+		window.tfsList = {
+			'1' : {
+				'tfId' : [ 100001, 300036, 300035 ],
+				'groupId' : '1',
+				'cb' : 'G.index.dealIntrest'
+			}
+		};
+	</script>
+
+
+	</script>
+	<script>
+		serverTime = '';
+	</script>
+<!-- 	<script type="text/javascript"
+		src="themes/68ecshopcom_360buy/images/icson/js/index/index.js"
+		charset="utf-8"></script> -->
+
+	<script>
+		var LOCGRAY = true;
+		serverTime = '';
+	</script>
+
+	<script type="text/javascript"
+		src="themes/68ecshopcom_360buy/images/icson/js/v1/footer.js"></script>
+	<!--[if !IE]><!-->
+	<script type="text/javascript">
+		(function(a) {
+			a.fn.snow = function(b) {
+				var d = a('<div class="christmas_flake" id="flake" />').css({
+					position : "absolute",
+					top : "-50px",
+					"z-index" : 9999
+				}).html("&#10053;");
+				a(document).height();
+				var e = a(document).width();
+				b = a.extend({}, {
+					minSize : 10,
+					maxSize : 20,
+					newOn : 500,
+					flakeColor : "#FFFFFF"
+				}, b);
+				setInterval(
+						function() {
+							var c = Math.random() * e - 100, f = 0.5 + Math
+									.random(), g = b.minSize + Math.random()
+									* b.maxSize, h = c - 100 + 200
+									* Math.random(), k = 2E3 + 5E3 * Math
+									.random();
+							d.clone().appendTo("body").css({
+								left : c,
+								opacity : f,
+								"font-size" : g,
+								color : b.flakeColor
+							}).animate({
+								top : 200,
+								left : h,
+								opacity : 0.1
+							}, k, "linear", function() {
+								a(this).remove()
+							})
+						}, b.newOn)
+			}
+		})(jQuery);
+		var isIE10 = /MSIE\s+10.0/i.test(navigator.userAgent) && function() {
+			return void 0 === this
+		}();
+		isIE10 || $.fn.snow({
+			minSize : 5,
+			maxSize : 30,
+			newOn : 1E3,
+			flakeColor : "#FFF"
+		});
+	</script>
+	<!--<![endif]-->
+	<script>
+		G.index.getServiceMsg();
+		G.footer.initBakTop();
+		timeStat[7] = new Date() - timeStat[0];
+		$(window).bind('load', function() {
+			G.util.ping.timeStat(timeStat, 50, 47);
+			G.util.ping.reportPerformance(50, 8);
+		});
+		window.yPageId = '1000';
+		window.yPageLevel = '1';
+	</script>
+	<script>
+		$(".sy_mod_rank_ext span").mouseover(
+				function() {
+					$(this).addClass("on").siblings().removeClass("on")
+							.parent().siblings().hide().siblings(
+									"." + $(this).attr("id")).show();
+				});
+	</script>
+
+</body>
+</html>

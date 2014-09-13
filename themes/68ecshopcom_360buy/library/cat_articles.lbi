@@ -1,0 +1,55 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="notice">
+                <div class="notice_hd">
+                    <div class="notice_tit">公告</div>
+                    <div class="notice_go hide" id="j_nbtn">
+                        <i class="notice_go_prev" id="j_nprev">&lt;</i>
+                        <i class="notice_go_next" id="j_nnext">&gt;</i>
+                    </div>
+                </div>
+                <div class="notice_bd">
+				
+<!--{foreach from=$articles item=article_item name=name}-->
+{if $smarty.foreach.name.first}
+	<ul class="notice_list" id="j_notice">
+{/if}
+{if $smarty.foreach.name.iteration<3}
+                        <li><a target="_blank" href="{$article_item.url}" title="{$article_item.title}" >{$article_item.short_title}</a></li>
+{/if}
+{if $smarty.foreach.name.iteration eq 2}                    
+</ul>
+{/if}
+
+{if $smarty.foreach.name.iteration eq 3}
+<ul class="notice_list hide" id="j_notice">
+{/if}
+{if $smarty.foreach.name.iteration>2 && $smarty.foreach.name.iteration<5}
+<li><a target="_blank" href="{$article_item.url}" title="{$article_item.title}" >{$article_item.short_title}</a></li>
+{/if}
+{if $smarty.foreach.name.iteration eq 4}                    
+</ul>
+{/if}
+{if $smarty.foreach.name.iteration eq 5}
+<ul class="notice_list hide" id="j_notice">
+{/if}
+{if $smarty.foreach.name.iteration>4 && $smarty.foreach.name.iteration<7}
+<li><a target="_blank" href="{$article_item.url}" title="{$article_item.title}" >{$article_item.short_title}</a></li>
+{/if}
+{if $smarty.foreach.name.iteration eq 6}                    
+</ul>
+{/if}
+{if $smarty.foreach.name.iteration eq 7}
+<ul class="notice_list hide" id="j_notice">
+{/if}
+{if $smarty.foreach.name.iteration>6 && $smarty.foreach.name.iteration<9}
+<li><a target="_blank" href="{$article_item.url}" title="{$article_item.title}" >{$article_item.short_title}</a></li>
+{/if}
+{if $smarty.foreach.name.iteration eq 8}                    
+</ul>
+{/if}
+<!--{/foreach}-->
+
+				</div>
+            </div>
+
+

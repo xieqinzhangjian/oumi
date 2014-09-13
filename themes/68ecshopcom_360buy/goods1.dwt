@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+{* 包含脚本文件 *}
+<!--JS增加_start   By www.ecshop120.com-->
+{insert_scripts files='magiczoom.js,magiczoom_plus.js'}
+<!--JS增加_end By www.ecshop120.com-->
+<script language="javascript">window.PRODUCT={ ID:13452, PPID:20408, NAME:'aa',TAOCAN:'0',QUE:0, QIANG:-1,ISCODE:false,ISBUY:false }</script>
+
+<!--shortcut end-->
+<link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/images/misc/product/skin/2012/pshow.css" media="all" />
+<script type="text/javascript">window.pageConfig = { compatible: true }; </script>
+<script language="javascript"> 
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+
+</head>
+<body style="position:relative; background: #F0F0F0;" >
+<script type="text/javascript" src="themes/68ecshopcom_360buy/js/jquery.min.js"></script>
+{insert_scripts files='jquery.json.js,transport.js'} 
+{insert_scripts files='common.js'}
+
+<script type="text/javascript" src="themes/68ecshopcom_360buy/images/misc/lib/js/2012/base-2011.js"></script>
+<script type="text/javascript" src="themes/68ecshopcom_360buy/js/main.js"></script>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link type="text/css" href="themes/68ecshopcom_360buy/images/icson/css/style.css" rel="stylesheet" />
+<div class="details_con">
+	<div class="details_box">
+		<div class="weizhi weizhi_big">
+<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+
+        </div>
+          <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+		<div class="big_pic_show">
+			<div class="bigpic">
+		 <a href="{if $pictures.0.img_original}{$pictures.0.img_original}{else}{$goods.original_img}{/if}" class="MagicZoom" id="zoom" rel="zoom-position: right; zoom-height: 360px;zoom-width:400px;" >
+	  <!-- {if $pictures}-->
+	  <img  src="{$pictures.0.img_url}"   />     
+          <!-- {else} -->
+         <img src="{$goods.goods_img}"  />
+         <!-- {/if}-->
+	 </a>
+            </div>
+			 <!-- #BeginLibraryItem "/library/goods_gallery.lbi" --><!-- #EndLibraryItem -->
+		
+			<div id="rightpicbtn" class="rightpicbtn"><span></span></div>
+			<div class="clear"></div>
+			<div class="fenxiang_box"> 
+				<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"> <span class="bds_more">分享到：</span> <a class="bds_qzone"></a> <a class="bds_tsina"></a> <a class="bds_tqq"></a> <a class="bds_renren"></a> <a class="bds_t163"></a> <a class="shareCount"></a> </div>
+				<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script> 
+				<script type="text/javascript" id="bdshell_js"></script> 
+				<script type="text/javascript">document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000)
+				</script> 
+			</div>
+			<div class="shoucang">
+				<a href="javascript:collect({$goods.goods_id})" ><img src="images/shoucang.png" width="90" height="33" /></a>
+			</div>
+		</div>
+		<!--产品信息-->
+		<div class="cp_buy_box">
+			<h2 class="d_h2"><strong>{$goods.goods_style_name}</strong></h2> 
+			<p class="miaoshu">{$goods.act_title}</p>
+          <!-- {if $cfg.show_marketprice} 市场价格-->
+          <div class="jg_39">
+          市&nbsp;场&nbsp;价：<del style="font-family:'微软雅黑';">{$goods.market_price}</del></div>
+          <!-- {/if} -->
+          
+            <div id="showAllPriceBox" style="left: 626.5px; top: 382px; display:none;">
+
+    <div class="showAllPriceBorder">
+    <i style="background-image:url(images/allprup.png);top: -22px;"></i>
+    <ul style="display: block;" class="p_13452"><li><a href="/product/20430.html">金色 16G 联通购机送费 </a><span>￥4399</span></li><li></li><li><a href="/product/20441.html">银色 16G 联通购机送费 </a><span>￥4399</span></li><li></li><li><a href="/product/20408.html">银色 16G </a><span>￥4450</span></li><li></li><li><a href="/product/20409.html">金色 16G </a><span>￥4450</span></li><li></li><li><a href="/product/20431.html">深空灰 16G 联通购机送费 </a><span>￥4450</span></li><li></li><li><a href="/product/21080.html">银色 16G 移动购机送费 </a><span>￥4450</span></li><li></li><li><a href="/product/21081.html">金色 16G 移动购机送费 </a><span>￥4450</span></li><li></li><li><a href="/product/20410.html">深空灰 16G </a><span>￥4499</span></li><li></li><li><a href="/product/21079.html">深空灰 16G 移动购机送费 </a><span>￥4499</span></li><li></li><li><a href="/product/20432.html">深空灰 32G 联通购机送费 </a><span>￥4999</span></li><li></li><li><a href="/product/20442.html">银色 32G 联通购机送费 </a><span>￥5020</span></li><li></li><li><a href="/product/20443.html">金色 32G 联通购机送费 </a><span>￥5020</span></li><li></li><li><a href="/product/20427.html">深空灰 32G </a><span>￥5050</span></li><li></li><li><a href="/product/20428.html">银色 32G </a><span>￥5060</span></li><li></li><li><a href="/product/20429.html">金色 32G </a><span>￥5060</span></li><li></li><li><a href="/product/20445.html">银色 64G </a><span>￥5760</span></li><li></li><li><a href="/product/20444.html">金色 64G </a><span>￥5799</span></li><li></li></ul>
+    </div>
+	
+</div>
+			<div class="jg_39">本&nbsp;店&nbsp;价：<strong title=""><big id="spprice" class="showallprice" > <!--{if $goods.is_promote and $goods.gmt_end_time } 促销-->
+              {$goods.promote_price}
+              <!--{else}-->
+              {$goods.shop_price_formated}
+              <!--{/if}--></big>
+                
+</strong>
+<script>
+
+$("#spprice").hover(function(){
+$('#showAllPriceBox').show();
+},function(){
+$('#showAllPriceBox').hide();
+});
+
+</script>
+                <a href="javascript:;" onclick="jiangjia(this)">降价通知</a>
+                <span id="viewsspan">（商品编号：{$goods.goods_sn}）</span></div>
+
+            {if $goods.peizhi}
+            <div class="jg_39" >配　　置：<b>{$goods.peizhi}</b></div>
+			{/if}
+            
+
+
+
+  <!-- {foreach from=$specification item=spec key=spec_key} -->
+      <li class="padd loop">
+      <strong>{$spec.name}:</strong><br />
+        <!-- {* 判断属性是复选还是单选 *} -->
+                    <!-- {if $spec.attr_type eq 1} -->
+                      <!-- {if $cfg.goodsattr_style eq 1} -->
+			
+                        <!--代码修改_start  By www.ecshop120.com 注：将 if $cfg.goodsattr_style eq 1 与 else 之间的代码修改成下面这个样子-->
+                        <div class="catt">
+			<!-- {foreach from=$spec.values item=value key=key} -->
+			<a {if $key eq 0}class="cattsel"{/if} {if $spec_key eq $attr_id}onclick="{literal}changeAtt(this,{$goods.goods_id});get_gallery_attr({$id}, {$value.id});{/literal}"{else} onclick="{literal}changeAtt(this,{$goods.goods_id});{/literal}"{/if} href="javascript:" name="{$value.id}" title="[{if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if} {$value.format_price|abs}]">{$value.label}<input style="display:none" id="spec_value_{$value.id}" type="radio" name="spec_{$spec_key}" value="{$value.id}" {if $key eq 0}checked{/if} /></a>
+			<!-- {/foreach} -->
+			</div>
+                        <input type="hidden" name="spec_list" value="{$key}" />
+			<!--代码修改_end  By www.ecshop120.com-->
+
+                        <!-- {else} -->
+                        <select name="spec_{$spec_key}" onchange="changePrice()">
+                          <!-- {foreach from=$spec.values item=value key=key} -->
+                          <option label="{$value.label}" value="{$value.id}">{$value.label} {if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if}{if $value.price neq 0}{$value.format_price}{/if}</option>
+                          <!-- {/foreach} -->
+                        </select>
+                        <input type="hidden" name="spec_list" value="{$key}" />
+                      <!-- {/if} -->
+                    <!-- {else} -->
+                      <!-- {foreach from=$spec.values item=value key=key} -->
+                      <label for="spec_value_{$value.id}">
+                      <input type="checkbox" name="spec_{$spec_key}" value="{$value.id}" id="spec_value_{$value.id}" onclick="changePrice()" />
+                      {$value.label} [{if $value.price gt 0}{$lang.plus}{elseif $value.price lt 0}{$lang.minus}{/if} {$value.format_price|abs}] </label><br />
+                      <!-- {/foreach} -->
+                      <input type="hidden" name="spec_list" value="{$key}" />
+                    <!-- {/if} -->
+      </li>
+      <!-- {/foreach} -->
+      <!-- {* 结束循环可选属性 *} -->
+
+			
+
+            <div class="kucun">
+				<div class="kczt">
+					<span>配 送 至：</span>
+					<div class="ps_info">
+						<b class="ck_kucun"><em id="kc_cityname"></em>（<small id="lblProductKcState">现货</small>）<i class="detail_icon"></i></b>
+						<em id="lblTextKcState" style="margin-left:10px;">17:00前下单，3小时内送达！</em>
+						<b id="lblShop" class="md_kucun">门店库存（<small id="lblProductKcStateShop">现货</small>）<i class="detail_icon"></i></b>
+						
+					</div>
+					<div class="ck_kucunshow">
+						<div class="close_ckkc"><a href="javascript:;" id="close_ckkc"><i class="detail_icon"></i></a></div>
+						<h3 class="ct_now"><strong id="now_sheng"><small>请选择</small><i class="detail_icon"></i></strong><strong id="now_shi"><small>请选择</small><i class="detail_icon"></i></strong><strong id="now_xian" class="cur"><small>请选择</small><i class="detail_icon"></i></strong></h3>
+						<div class="kc_citylist">
+							<div class="kcct_se" id="ct_sheng">
+								<a onclick="loadKcArea(2,this)" pname="云南省">云南省</a><a onclick="loadKcArea(3,this)" pname="贵州省">贵州省</a>
+							</div>
+							<div class="kcct_se" id="ct_shi"></div>
+							<div class="kcct_se" id="ct_xian" style="display:block;"></div>
+						</div>
+					</div>
+					<div id="lblShopList" class="md_kucunshow"><ul><li><a title="点击查看佰腾总店详细信息" href="http://www.ch999.com/help/606.html" target="_blank" address="昆明市圆通北路127号云大晟苑5楼" hours="周一至周日:9:00-21:30" tel="0871-68393939">佰腾总店</a></li><li><a title="点击查看关上店详细信息" href="http://www.ch999.com/help/607.html" target="_blank" address="昆明市关上关兴路万兴印象4栋2-1室" hours="周一至周日:9:00-21:30" tel="0871-68393939">关上店</a></li><li><a title="点击查看南屏街店详细信息" href="http://www.ch999.com/help/1447.html" target="_blank" address="昆明市南屏街家乐福世纪广场C1座12楼" hours="周一至周日:9:00-21:30" tel="0871-68393939">南屏街店</a></li><li><a title="点击查看小西门店详细信息" href="http://www.ch999.com/help/2988.html" target="_blank" address="昆明市小西门东风西路280号文贸大厦18楼A/B室" hours="周一至周日:9:00-21:30" tel="0871-68393939">小西门店</a></li><li><a title="点击查看南亚店详细信息" href="http://www.ch999.com/help/3271.html" target="_blank" address="昆明市滇池路南亚风情第壹城C4栋一单元1410室" hours="周一至周日:9:00-21:30" tel="0871-68393939">南亚店</a></li><li><a title="点击查看北市区店详细信息" href="http://www.ch999.com/help/3785.html" target="_blank" address="昆明市北市区霖雨路与红锦路交叉口红锦路15号（沙坝营公交站台）" hours="周一至周日:9:00-21:30" tel="0871-68393939">北市区店</a></li><li><a title="点击查看世纪城店详细信息" href="http://www.ch999.com/help/4186.html" target="_blank" address="昆明市世纪城世纪金源商务中心3幢10楼B1号" hours="周一至周日:9:00-21:30" tel="0871-68393939">世纪城店</a></li><li><a title="点击查看环城东路店详细信息" href="http://www.ch999.com/help/4327.html" target="_blank" address="昆明市环城东路金色年华二期4楼（白龙路与环城东路交叉口）" hours="周一至周日:9:00-21:30" tel="0871-68393939">环城东路店</a></li><li><a title="点击查看白云路店详细信息" href="http://www.ch999.com/help/4364.html" target="_blank" address="昆明市北京路金色年华A座10楼（北京路与白云路交叉口）" hours="周一至周日:9:00-21:30" tel="087168393939">白云路店</a></li><li><a title="点击查看北辰店详细信息" href="http://www.ch999.com/help/5080.html" target="_blank" address="昆明市欣都龙城1栋401北辰财富中心对面" hours="周一至周日:9:00-21:30" tel="087168393939">北辰店</a></li><li><a title="点击查看黄土坡店详细信息" href="#" target="_blank" address="昆明市黄土坡立交桥西口U族部落S-106号商铺" hours="周一至周日:9:00-18:00" tel="087168393939">黄土坡店</a></li><li><a title="点击查看西市区店详细信息" href="http://www.ch999.com/help/1745.html" target="_blank" address="昆明市西山区兴苑路秋苑小区31栋秋水台" hours="周一至周日:9:00-21:30" tel="0871-68393939">西市区店</a></li></ul></div>
+					
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="zhichifuw"> 
+				<span>支持服务：</span>
+                <h6><a href="/help/4531.html" target="_blank" title="现货商品可享受3小时内送达，免费提供，仅限昆明、贵阳、大理城区。支持现场验货、安装调试满意再付款！">3小时极速达</a></h6><h6><a href="/help/4483.html#jiajisong" target="_blank" title="专人为您进行配送服务，费用：20元/单！">加急配送</a></h6>
+                <div id="fenqifu">
+	                <a href="/help/5089.html" title="本商品支持支付宝 - 信用卡分期付款">分期付款</a>
+	                
+                </div>
+				<div class="clear"></div>
+			</div>
+            <div id="divServices" class="fuwu">
+                <span>三九服务：</span>
+                <ul id="servicesContent"><li><div class='item'><b></b><a href="javascript:;" ppriceid="20603"><img class="fw_icon" src="http://img2.ch999img.com/pic/product/70x70/20131120183317952.jpg" />延长保修 新年特惠1年  ￥49</a><a class='hide' href="javascript:;" ppriceid="19881"><img class="fw_icon" src="http://img2.ch999img.com/pic/product/70x70/20131120183317952.jpg" />延长保修 1年  ￥499</a></div></li><li><div class='item'><b></b><a href="javascript:;" ppriceid="20599"><img class="fw_icon" src="http://img2.ch999img.com/pic/product/70x70/20131120183145403.jpg" />意外保摔碰管修 新年特惠1年  ￥99</a><a class='hide' href="javascript:;" ppriceid="20602"><img class="fw_icon" src="http://img2.ch999img.com/pic/product/70x70/20131120183145403.jpg" />意外保摔碰管修 新年特惠2年  ￥269</a><a class='hide' href="javascript:;" ppriceid="19882"><img class="fw_icon" src="http://img2.ch999img.com/pic/product/70x70/20131120183145403.jpg" />意外保摔碰管修 1年  ￥599</a></div></li><li><a href="/help/5429.html" target="_blank" style="border:0;" class="a-link" title="详情">详情</a></li></ul>
+                <div class="clear"></div>
+                
+            </div>
+
+             <div style="display: none;" id="yixuanze"><span>已&nbsp;选&nbsp;择：</span><h6></h6><div class="clear"></div></div>
+
+			
+			
+            <div id="buyType">
+	
+            <a href="javascript:addToCart({$goods.goods_id})" class="add_gwc"><img src="images/addgwc_btn.png" width="198" height="62" /></a>          
+</div>            
+            
+            <a href="javascript:void(0);" link="#" tit="#" ppid="20408" price="4450.00" imgsrc="20131207093537691.jpg" class="add_gwc" onclick="duibi(this)"><img src="images/add_duibi.png" width="198" height="62" /></a>
+			<div class="clear" style="height:20px; line-height:20px;"></div>
+            
+            
+            
+		</div>
+        <div id="buyType">
+     <!--增加_start By www.ecshop120.com-->
+	<font style="color:#CCCCCC;">（<font id="shows_number">{$goods.goods_number} </font>）</font>
+	<!--增加_end By www.ecshop120.com-->
+        </div>
+        </form>
+		<div class="clear"></div>
+
+	</div>
+</div>
+
+<!--配件开始-->
+<div id="zuhe" class="zuhe">
+	<dl id="zuhe_tab" class="zuhe_tab">		
+        <dt class="ztab">
+			<h3>推荐组合</h3>
+            <span id="t1" class="zhover">推荐配件(15)</span><span id="t2">保护壳/贴膜(6)</span><span id="t3">有线耳机(2)</span><span id="t4">智能设备(1)</span><span id="t5">电池/充电宝(2)</span><span id="t6">蓝牙耳机(3)</span><span id="t7">车载/其他(1)</span>
+		</dt>
+		<dd class="t1" style="display:block;"><ul><li><a href="/product/15170.html" title="MOSHI/摩仕 iPhone 5/5s 超薄铝制保护外壳"><img src="http://img2.ch999img.com/pic/product/160x160/2013681453858.jpg" width="120" height="120" title="MOSHI/摩仕 iPhone 5/5s 超薄铝制保护外壳" /><p>MOSHI/摩仕 iPhone 5/5s 超薄铝制保护外壳</p></a>
+<span>单卖价：<del id="danmai">￥180.00</del></span>
+                        <input name="" type="checkbox" value="160.00" ppid="15170" /><strong>￥160.00</strong></li><li><a href="/product/18085.html" title="Monster/魔声 Beats ibeats/爱彼此二代 简装入耳式耳机 "><img src="http://img2.ch999img.com/pic/product/160x160/201371410324485.jpg" width="120" height="120" title="Monster/魔声 Beats ibeats/爱彼此二代 简装入耳式耳机 " /><p>Monster/魔声 Beats ibeats/爱彼此二代 简装入耳式耳机 </p></a>
+<span>单卖价：<del id="danmai">￥390.00</del></span>
+                        <input name="" type="checkbox" value="370.00" ppid="18085" /><strong>￥370.00</strong></li><li><a href="/product/19031.html" title="YOOBAO 羽博 魔棒移动电源 YB-6014 10400毫安"><img src="http://img2.ch999img.com/pic/product/160x160/20139161081366.jpg" width="120" height="120" title="YOOBAO 羽博 魔棒移动电源 YB-6014 10400毫安" /><p>YOOBAO 羽博 魔棒移动电源 YB-6014 10400毫安</p></a>
+<span>单卖价：<del id="danmai">￥150.00</del></span>
+                        <input name="" type="checkbox" value="130.00" ppid="19031" /><strong>￥130.00</strong></li><li><a href="/product/19761.html" title="Plantronics 缤特力 voyager Legend 传奇 蓝牙耳机（豪华版）"><img src="http://img2.ch999img.com/pic/product/160x160/20131106161513229.jpg" width="120" height="120" title="Plantronics 缤特力 voyager Legend 传奇 蓝牙耳机（豪华版）" /><p>Plantronics 缤特力 voyager Legend 传奇 蓝牙耳机（豪华版）</p></a>
+<span>单卖价：<del id="danmai">￥880.00</del></span>
+                        <input name="" type="checkbox" value="840.00" ppid="19761" /><strong>￥840.00</strong></li><li><a href="/product/19909.html" title="GGS 金钢 iPhone5/5s/5c 钢化玻璃保护膜"><img src="http://img2.ch999img.com/pic/product/160x160/20131205131817964.jpg" width="120" height="120" title="GGS 金钢 iPhone5/5s/5c 钢化玻璃保护膜" /><p>GGS 金钢 iPhone5/5s/5c 钢化玻璃保护膜</p></a>
+<span>单卖价：<del id="danmai">￥139.00</del></span>
+                        <input name="" type="checkbox" value="119.00" ppid="19909" /><strong>￥119.00</strong></li><li><a href="/product/20537.html" title="HODA 好贴 iPhone5 5s 钢化屏幕保护贴"><img src="http://img2.ch999img.com/pic/product/160x160/20131222094001240.jpg" width="120" height="120" title="HODA 好贴 iPhone5 5s 钢化屏幕保护贴" /><p>HODA 好贴 iPhone5 5s 钢化屏幕保护贴</p></a>
+<span>单卖价：<del id="danmai">￥139.00</del></span>
+                        <input name="" type="checkbox" value="119.00" ppid="20537" /><strong>￥119.00</strong></li><li><a href="/product/14901.html" title="Plantronics 缤特力 Marque 2 M165 音乐蓝牙耳机"><img src="http://img2.ch999img.com/pic/product/160x160/2013151347254.jpg" width="120" height="120" title="Plantronics 缤特力 Marque 2 M165 音乐蓝牙耳机" /><p>Plantronics 缤特力 Marque 2 M165 音乐蓝牙耳机</p></a>
+<span>单卖价：<del id="danmai">￥350.00</del></span>
+                        <input name="" type="checkbox" value="330.00" ppid="14901" /><strong>￥330.00</strong></li><li><a href="/product/20402.html" title="emie 小恶魔聚合物锂离子电芯移动电源 5200毫安"><img src="http://img2.ch999img.com/pic/product/160x160/20131207141555517.jpg" width="120" height="120" title="emie 小恶魔聚合物锂离子电芯移动电源 5200毫安" /><p>emie 小恶魔聚合物锂离子电芯移动电源 5200毫安</p></a>
+<span>单卖价：<del id="danmai">￥210.00</del></span>
+                        <input name="" type="checkbox" value="190.00" ppid="20402" /><strong>￥190.00</strong></li><li><a href="/product/12818.html" title="YOOBAO/羽博车载充电器 车充 YB-203"><img src="http://img2.ch999img.com/pic/product/160x160/201222414534899.jpg" width="120" height="120" title="YOOBAO/羽博车载充电器 车充 YB-203" /><p>YOOBAO/羽博车载充电器 车充 YB-203</p></a>
+<span>单卖价：<del id="danmai">￥59.00</del></span>
+                        <input name="" type="checkbox" value="39.00" ppid="12818" /><strong>￥39.00</strong></li><li><a href="/product/18776.html" title="Plantronics 缤特力 Discovery975 旗舰级 白色立体声蓝牙耳机 带车充"><img src="http://img2.ch999img.com/pic/product/160x160/201382115421984.jpg" width="120" height="120" title="Plantronics 缤特力 Discovery975 旗舰级 白色立体声蓝牙耳机 带车充" /><p>Plantronics 缤特力 Discovery975 旗舰级 白色立体声蓝牙耳机 带车充</p></a>
+<span>单卖价：<del id="danmai">￥670.00</del></span>
+                        <input name="" type="checkbox" value="630.00" ppid="18776" /><strong>￥630.00</strong></li><li><a href="/product/14844.html" title="LENTION/蓝盛 iPhone 5/5S 磨砂防指纹/水晶 双面保护膜"><img src="http://img2.ch999img.com/pic/product/160x160/20129281255161.jpg" width="120" height="120" title="LENTION/蓝盛 iPhone 5/5S 磨砂防指纹/水晶 双面保护膜" /><p>LENTION/蓝盛 iPhone 5/5S 磨砂防指纹/水晶 双面保护膜</p></a>
+<span>单卖价：<del id="danmai">￥39.00</del></span>
+                        <input name="" type="checkbox" value="29.00" ppid="14844" /><strong>￥29.00</strong></li><li><a href="/product/19165.html" title="Jawbone UP 智能手环2代"><img src="http://img2.ch999img.com/pic/product/160x160/20139261311261.jpg" width="120" height="120" title="Jawbone UP 智能手环2代" /><p>Jawbone UP 智能手环2代</p></a>
+<span>单卖价：<del id="danmai">￥1290.00</del></span>
+                        <input name="" type="checkbox" value="1058.00" ppid="19165" /><strong>￥1058.00</strong></li><li><a href="/product/18621.html" title="Monster/魔声 Beats executive/行政执行官 头戴式耳机"><img src="http://img2.ch999img.com/pic/product/160x160/201381114254294.jpg" width="120" height="120" title="Monster/魔声 Beats executive/行政执行官 头戴式耳机" /><p>Monster/魔声 Beats executive/行政执行官 头戴式耳机</p></a>
+<span>单卖价：<del id="danmai">￥2780.00</del></span>
+                        <input name="" type="checkbox" value="2740.00" ppid="18621" /><strong>￥2740.00</strong></li><li><a href="/product/20553.html" title="cross-line sp-5 shadow 十字架 iPhone 5 5s 0.7毫米超薄金属边框"><img src="http://img2.ch999img.com/pic/product/160x160/20131224091927392.jpg" width="120" height="120" title="cross-line sp-5 shadow 十字架 iPhone 5 5s 0.7毫米超薄金属边框" /><p>cross-line sp-5 shadow 十字架 iPhone 5 5s 0.7毫米超薄金属边框</p></a>
+<span>单卖价：<del id="danmai">￥119.00</del></span>
+                        <input name="" type="checkbox" value="99.00" ppid="20553" /><strong>￥99.00</strong></li><li><a href="/product/14879.html" title="MOSHI/摩仕iGlaze for iPhone 5/5s 超薄时尚保护外壳"><img src="http://img2.ch999img.com/pic/product/160x160/20136814583464.jpg" width="120" height="120" title="MOSHI/摩仕iGlaze for iPhone 5/5s 超薄时尚保护外壳" /><p>MOSHI/摩仕iGlaze for iPhone 5/5s 超薄时尚保护外壳</p></a>
+<span>单卖价：<del id="danmai">￥180.00</del></span>
+                        <input name="" type="checkbox" value="160.00" ppid="14879" /><strong>￥160.00</strong></li></ul></dd>
+
+		<dd class="containerzh t2" style="display:none;"><ul><li><a href="/product/15170.html" title="MOSHI/摩仕 iPhone 5/5s 超薄铝制保护外壳"><img src="http://img2.ch999img.com/pic/product/160x160/2013681453858.jpg" width="120" height="120" title="MOSHI/摩仕 iPhone 5/5s 超薄铝制保护外壳" /><p>MOSHI/摩仕 iPhone 5/5s 超薄铝制保护外壳</p></a>
+<span>单卖价：<del id="danmai">￥180.00</del></span>
+                        <input name="" type="checkbox" value="160.00" ppid="15170" /><strong>￥160.00</strong></li><li><a href="/product/19909.html" title="GGS 金钢 iPhone5/5s/5c 钢化玻璃保护膜"><img src="http://img2.ch999img.com/pic/product/160x160/20131205131817964.jpg" width="120" height="120" title="GGS 金钢 iPhone5/5s/5c 钢化玻璃保护膜" /><p>GGS 金钢 iPhone5/5s/5c 钢化玻璃保护膜</p></a>
+<span>单卖价：<del id="danmai">￥139.00</del></span>
+                        <input name="" type="checkbox" value="119.00" ppid="19909" /><strong>￥119.00</strong></li><li><a href="/product/20537.html" title="HODA 好贴 iPhone5 5s 钢化屏幕保护贴"><img src="http://img2.ch999img.com/pic/product/160x160/20131222094001240.jpg" width="120" height="120" title="HODA 好贴 iPhone5 5s 钢化屏幕保护贴" /><p>HODA 好贴 iPhone5 5s 钢化屏幕保护贴</p></a>
+<span>单卖价：<del id="danmai">￥139.00</del></span>
+                        <input name="" type="checkbox" value="119.00" ppid="20537" /><strong>￥119.00</strong></li><li><a href="/product/14844.html" title="LENTION/蓝盛 iPhone 5/5S 磨砂防指纹/水晶 双面保护膜"><img src="http://img2.ch999img.com/pic/product/160x160/20129281255161.jpg" width="120" height="120" title="LENTION/蓝盛 iPhone 5/5S 磨砂防指纹/水晶 双面保护膜" /><p>LENTION/蓝盛 iPhone 5/5S 磨砂防指纹/水晶 双面保护膜</p></a>
+<span>单卖价：<del id="danmai">￥39.00</del></span>
+                        <input name="" type="checkbox" value="29.00" ppid="14844" /><strong>￥29.00</strong></li><li><a href="/product/20553.html" title="cross-line sp-5 shadow 十字架 iPhone 5 5s 0.7毫米超薄金属边框"><img src="http://img2.ch999img.com/pic/product/160x160/20131224091927392.jpg" width="120" height="120" title="cross-line sp-5 shadow 十字架 iPhone 5 5s 0.7毫米超薄金属边框" /><p>cross-line sp-5 shadow 十字架 iPhone 5 5s 0.7毫米超薄金属边框</p></a>
+<span>单卖价：<del id="danmai">￥119.00</del></span>
+                        <input name="" type="checkbox" value="99.00" ppid="20553" /><strong>￥99.00</strong></li><li><a href="/product/14879.html" title="MOSHI/摩仕iGlaze for iPhone 5/5s 超薄时尚保护外壳"><img src="http://img2.ch999img.com/pic/product/160x160/20136814583464.jpg" width="120" height="120" title="MOSHI/摩仕iGlaze for iPhone 5/5s 超薄时尚保护外壳" /><p>MOSHI/摩仕iGlaze for iPhone 5/5s 超薄时尚保护外壳</p></a>
+<span>单卖价：<del id="danmai">￥180.00</del></span>
+                        <input name="" type="checkbox" value="160.00" ppid="14879" /><strong>￥160.00</strong></li></ul></dd>
+
+		<dd class="containerzh t3" style="display:none;"><ul><li><a href="/product/18085.html" title="Monster/魔声 Beats ibeats/爱彼此二代 简装入耳式耳机 "><img src="http://img2.ch999img.com/pic/product/160x160/201371410324485.jpg" width="120" height="120" title="Monster/魔声 Beats ibeats/爱彼此二代 简装入耳式耳机 " /><p>Monster/魔声 Beats ibeats/爱彼此二代 简装入耳式耳机 </p></a>
+<span>单卖价：<del id="danmai">￥390.00</del></span>
+                        <input name="" type="checkbox" value="370.00" ppid="18085" /><strong>￥370.00</strong></li><li><a href="/product/18621.html" title="Monster/魔声 Beats executive/行政执行官 头戴式耳机"><img src="http://img2.ch999img.com/pic/product/160x160/201381114254294.jpg" width="120" height="120" title="Monster/魔声 Beats executive/行政执行官 头戴式耳机" /><p>Monster/魔声 Beats executive/行政执行官 头戴式耳机</p></a>
+<span>单卖价：<del id="danmai">￥2780.00</del></span>
+                        <input name="" type="checkbox" value="2740.00" ppid="18621" /><strong>￥2740.00</strong></li></ul></dd>
+
+		<dd class="containerzh t4" style="display:none;"><ul><li><a href="/product/19165.html" title="Jawbone UP 智能手环2代"><img src="http://img2.ch999img.com/pic/product/160x160/20139261311261.jpg" width="120" height="120" title="Jawbone UP 智能手环2代" /><p>Jawbone UP 智能手环2代</p></a>
+<span>单卖价：<del id="danmai">￥1290.00</del></span>
+                        <input name="" type="checkbox" value="1058.00" ppid="19165" /><strong>￥1058.00</strong></li></ul></dd>
+
+		<dd class="containerzh t5" style="display:none;"><ul><li><a href="/product/19031.html" title="YOOBAO 羽博 魔棒移动电源 YB-6014 10400毫安"><img src="http://img2.ch999img.com/pic/product/160x160/20139161081366.jpg" width="120" height="120" title="YOOBAO 羽博 魔棒移动电源 YB-6014 10400毫安" /><p>YOOBAO 羽博 魔棒移动电源 YB-6014 10400毫安</p></a>
+<span>单卖价：<del id="danmai">￥150.00</del></span>
+                        <input name="" type="checkbox" value="130.00" ppid="19031" /><strong>￥130.00</strong></li><li><a href="/product/20402.html" title="emie 小恶魔聚合物锂离子电芯移动电源 5200毫安"><img src="http://img2.ch999img.com/pic/product/160x160/20131207141555517.jpg" width="120" height="120" title="emie 小恶魔聚合物锂离子电芯移动电源 5200毫安" /><p>emie 小恶魔聚合物锂离子电芯移动电源 5200毫安</p></a>
+<span>单卖价：<del id="danmai">￥210.00</del></span>
+                        <input name="" type="checkbox" value="190.00" ppid="20402" /><strong>￥190.00</strong></li></ul></dd>
+
+		<dd class="containerzh t6" style="display:none;"><ul><li><a href="/product/19761.html" title="Plantronics 缤特力 voyager Legend 传奇 蓝牙耳机（豪华版）"><img src="http://img2.ch999img.com/pic/product/160x160/20131106161513229.jpg" width="120" height="120" title="Plantronics 缤特力 voyager Legend 传奇 蓝牙耳机（豪华版）" /><p>Plantronics 缤特力 voyager Legend 传奇 蓝牙耳机（豪华版）</p></a>
+<span>单卖价：<del id="danmai">￥880.00</del></span>
+                        <input name="" type="checkbox" value="840.00" ppid="19761" /><strong>￥840.00</strong></li><li><a href="/product/14901.html" title="Plantronics 缤特力 Marque 2 M165 音乐蓝牙耳机"><img src="http://img2.ch999img.com/pic/product/160x160/2013151347254.jpg" width="120" height="120" title="Plantronics 缤特力 Marque 2 M165 音乐蓝牙耳机" /><p>Plantronics 缤特力 Marque 2 M165 音乐蓝牙耳机</p></a>
+<span>单卖价：<del id="danmai">￥350.00</del></span>
+                        <input name="" type="checkbox" value="330.00" ppid="14901" /><strong>￥330.00</strong></li><li><a href="/product/18776.html" title="Plantronics 缤特力 Discovery975 旗舰级 白色立体声蓝牙耳机 带车充"><img src="http://img2.ch999img.com/pic/product/160x160/201382115421984.jpg" width="120" height="120" title="Plantronics 缤特力 Discovery975 旗舰级 白色立体声蓝牙耳机 带车充" /><p>Plantronics 缤特力 Discovery975 旗舰级 白色立体声蓝牙耳机 带车充</p></a>
+<span>单卖价：<del id="danmai">￥670.00</del></span>
+                        <input name="" type="checkbox" value="630.00" ppid="18776" /><strong>￥630.00</strong></li></ul></dd>
+
+		<dd class="containerzh t7" style="display:none;"><ul><li><a href="/product/12818.html" title="YOOBAO/羽博车载充电器 车充 YB-203"><img src="http://img2.ch999img.com/pic/product/160x160/201222414534899.jpg" width="120" height="120" title="YOOBAO/羽博车载充电器 车充 YB-203" /><p>YOOBAO/羽博车载充电器 车充 YB-203</p></a>
+<span>单卖价：<del id="danmai">￥59.00</del></span>
+                        <input name="" type="checkbox" value="39.00" ppid="12818" /><strong>￥39.00</strong></li></ul></dd>
+
+		            
+	</dl>
+
+	<div class="zuhe_price">
+        <h4>超值优惠套装</h4>
+		<h5>已选择：<span id="geshu">0</span>个配件<a href="javascript:;" id="clearcheck"> [清除选择]</a></h5>
+		<div class="z_pr_info">
+			<p>套装价：<strong>￥<b id="zongprice">0.00</b></strong></p>
+            <p>原价：<del>￥<b id="yuanprice">0.00</b></del></p>
+			<p>已节省：￥<b id="zongjiesheng">0.00</b></p>
+			<a href="javascript:void(0);" onclick="ZuheBuy(this);"></a>
+		</div>
+		
+	</div>
+    <div class="clear"></div>
+</div>
+<!--配件结束-->
+<script type="text/javascript" src="themes/68ecshopcom_360buy/js/goods.js"></script>
+
+<div style="height:20px; line-height:20px; clear:both;"></div>
+
+<div class="w">
+  <div class="right" style="background:#FFF;">
+  <div class="x_mod_tab xoverview x_mod_tab1" id="product-detail" >
+  <div class="x_mod_tab_hd" id="inner" >
+    <ul class="x_mod_tab_nav">
+      <li class="current" id="goods1" onclick="setTabCatGoods('goods',1,5)"><a  href="#product-detail" ><i class="xico xico_intro"></i>产品介绍</a></li>
+      <li id="goods2" onclick="setTabCatGoods('goods',2,5)"><a  href="#product-detail" ><i class="xico xico_spec"></i>规格参数</a></li>
+      
+      <li id="goods3" onclick="setTabCatGoods('goods',3,5)"><a href="#product-detail"><i class="xico xico_refer"></i>价格走势</a></li>
+      <li id="goods4" onclick="setTabCatGoods('goods',4,5)"><a href="#product-detail"><i class="xico xico_comment"></i>商品评价({$evaluation})</a></li>
+      <li style="display: list-item;" id="goods5" onclick="setTabCatGoods('goods',5,5)"><a href="#zixunmt" style="width: 187px"><i class="xico xico_aftersale"></i>售前咨询</a></li>
+    </ul>
+    
+  </div>
+  <div class="x_mod_tab_bd">
+    <div  class="x_mod_tab_con"  id="con_goods_1" >
+     {$goods.goods_desc} 
+     <div class="clear" style="height:10px; line-height:10px;"></div>
+    </div>
+    <div class="x_mod_tab_con " id="con_goods_2" style="display:none;">
+       <div id="nca_param_wrap">
+        <table class="specification" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td colspan="2" class="title">基本参数</td>
+            </tr>
+             <!-- {foreach from=$properties item=property_group key=key} -->
+              <!-- {foreach from=$property_group item=property} -->
+            <tr>
+             <td class="name">{$property.name|escape:html}</td>
+             <td class="desc">{$property.value}</td>
+            </tr>
+            <!-- {/foreach}-->
+            <!-- {/foreach}-->
+             </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="x_mod_tab_con " id="con_goods_3" style="display:none;">
+    
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+              codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
+              width="950" height="420" id="FCColumn2" align="middle">
+              <PARAM NAME="FlashVars" value="&dataXML={$xml}">
+              <PARAM NAME=movie VALUE="themes/68ecshopcom_360buy/charts/MSline.swf?chartWidth=950&chartHeight=400">
+              <param NAME="quality" VALUE="high">
+              <param NAME="bgcolor" VALUE="#FFFFFF">
+              <param NAME="wmode" VALUE="opaque">
+              <embed src="charts/MSline.swf?chartWidth=650&chartHeight=400" FlashVars="&dataXML={$xml}" quality="high" bgcolor="#FFFFFF"  width="950" height="400" name="FCColumn2" wmode="opaque" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+            </object>
+            <div style="height:20px; line-height:20px; clear:both;"></div>
+    </div>
+    <div class="x_mod_tab_con" id="con_goods_4" style="display:none;"></div>
+    <div class="x_mod_tab_con xrefer" id="con_goods_5" style="display:none;"></div>
+  <div class="clear"></div>
+<!-- #BeginLibraryItem "/library/comments.lbi" --><!-- #EndLibraryItem -->
+    <!--代码增加_start  By www.68ecshop.com -->
+<!-- #BeginLibraryItem "/library/question.lbi" --><!-- #EndLibraryItem -->
+
+  </div>
+</div>
+<!--recommend end-->
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTabCatGoods(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+con.style.display=i==cursel?"block":"none";
+menu.className=i==cursel?"current":"";
+}
+}
+//-->
+</script>
+
+    
+    
+      
+    
+<!--代码增加_end  By www.68ecshop.com -->
+    <script type="text/javascript">
+var obj11 = document.getElementById("inner");
+var top11 = getTop(obj11);
+var isIE6 = /msie 6/i.test(navigator.userAgent);
+window.onscroll = function(){
+
+	var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+	if (bodyScrollTop > top11){
+		obj11.style.position = (isIE6) ? "absolute" : "fixed";
+		obj11.style.top = (isIE6) ? bodyScrollTop + "px" : "0px";
+	} else {
+		obj11.style.position = "static";
+	}
+}
+function getTop(e){
+
+	var offset = e.offsetTop;
+	if(e.offsetParent != null) offset += getTop(e.offsetParent);
+	return offset;
+}
+</script>
+ </div>
+  <!--right end-->
+  <div class="left">
+    <div id="related-sorts" class="m m2" style="background:#FFF;" >
+      <div class="mt">
+        <h2>相关分类</h2>
+      </div>
+      <div class="mc">
+        <ul class="lh">
+          <?php
+		 $parent_cat_id = get_parent_cat_id($GLOBALS['smarty']->_var['goods']['cat_id']);
+		 $GLOBALS['smarty']->assign('child_cat',get_child_cat($parent_cat_id));
+		  ?>
+          <!--{foreach from=$child_cat item=cat name=child_cat}-->
+          <li><a href="{$cat.url}" title="{$cat.name|escape:html}">{$cat.name|escape:html}</a></li>
+          <!--{/foreach}-->
+        </ul>
+      </div>
+    </div>
+    <!--related-sorts end-->
+    <div id="related-brands" class="m m2" style="background:#FFF;">
+      <div class="mt">
+        <h2>同类品牌</h2>
+      </div>
+      <div class="mc">
+        <ul class="lh">
+          <?php $GLOBALS['smarty']->assign('get_cat_brands',get_cat_brands($this->_var['goods']['cat_id']));?>
+          <!--{foreach from=$get_cat_brands item=brand_cat name=get_cat_brands}-->
+          <li><a href="brand.php?id={$brand_cat.id}" title="{$brand_cat.name}">{$brand_cat.name}</a></li>
+          <!--{/foreach}-->
+        </ul>
+      </div>
+    </div>
+    <!--related-brands end-->
+
+    <script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTabglo(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+con.style.display=i==cursel?"block":"none";
+menu.className=i==cursel?"current":"";
+}
+}
+//-->
+</script>
+    
+{if $bought_goods}    
+<div id="sea_see_same" style="height: auto;">
+  <div class="x_mod_box xbrowse">
+    <div class="x_mod_box_hd">
+      <div class="x_mod_box_tit">购买此商品的人还买了</div>
+    </div>
+    <div class="x_mod_box_bd">
+      <ul class="x_mod_goods_list">
+       <!--{foreach from=$bought_goods item=bought_goods_data name=bought_goods}-->
+         <li {if $smarty.foreach.bought_goods.last} class="x_mod_goods_last"{/if}>
+          <div class="mod_goods x_mod_goods">
+            <div class="mod_goods_img"><a target="_blank" href="{$bought_goods_data.url}" title="{$bought_goods_data.goods_name|escape:html}"><img src="{$bought_goods_data.goods_thumb}" alt="{$bought_goods_data.goods_name|escape:html}"></a></div>
+            <div class="mod_goods_info">
+              <p class="mod_goods_tit"><a target="_blank" href="{$bought_goods_data.url}" title="{$bought_goods_data.goods_name|escape:html}">{$bought_goods_data.short_name}</a></p>
+              <p class="mod_goods_price"><span class="mod_price c_tx1"><span> <!-- {if $bought_goods_data.promote_price neq 0} -->
+            {$bought_goods_data.formated_promote_price}
+            <!-- {else}-->
+            {$bought_goods_data.shop_price}
+            <!--{/if}--></span></span></p>
+            </div>
+          </div>
+        </li>
+         <!-- {/foreach} -->
+      </ul>
+    </div>
+  </div>
+</div>
+{/if}
+<!-- #BeginLibraryItem "/library/goods_related.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/goods_attrlinked.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/goods_article.lbi" --><!-- #EndLibraryItem -->
+ <div class="x_mod_box xsame">
+  <div class="x_mod_box_hd">
+    <ul class="x_mod_box_nav">
+      <li class="current"  id="glo1" onmouseover="setTabglo('glo',1,2)"><a href="javascript:" >同价位</a></li>
+      <li id="glo2" onmouseover="setTabglo('glo',2,2)"><a href="javascript:" >同品牌</a></li>
+    </ul>
+  </div>
+  <div class="x_mod_box_bd" style="height:auto;">
+    <div class="xsame_item" id="con_glo_1" style="display:block;">
+      <ul class="x_mod_goods_list">
+        <?php
+		 $GLOBALS['smarty']->assign('hot_goods', get_cat_recommend_goods('hot', get_children($GLOBALS['smarty']->_var['goods']['cat_id']), 8, $GLOBALS['smarty']->_var['goods']['brand_id']));
+
+		?>
+          <!--{foreach from=$hot_goods item=goods_item name=cat_item_goods}-->
+        <li {if $smarty.foreach.cat_item_goods.last}class="x_mod_goods_last"{/if}>
+          <div class="mod_goods x_mod_goods">
+            <div class="mod_goods_img"><a target="_blank" href="{$goods_item.url}" title="{$goods_item.name|escape:html}" ><img src="{$goods_item.thumb}" alt="{$goods_item.name|escape:html}"></a></div>
+            <div class="mod_goods_info">
+              <p class="mod_goods_tit"><a target="_blank" href="{$goods_item.url}" title="{$goods_item.name|escape:html}">{$goods_item.name|escape:html}</a></p>
+              <p class="mod_goods_price"><span class="mod_price c_tx1"><span> <!-- {if $goods_item.promote_price neq ""} -->
+            {$goods_item.promote_price}
+            <!-- {else}-->
+            {$goods_item.shop_price}
+            <!--{/if}--></span></span></p>
+            </div>
+          </div>
+        </li>
+         <!--{/foreach}-->
+        
+        
+        
+      </ul>
+    </div>
+    <div class="xsame_item" id="con_glo_2" style="display:none;">
+      <ul class="x_mod_goods_list">
+          <?php
+		 $price_arr = get_goods_min_max_price($GLOBALS['smarty']->_var['goods']['goods_id']);
+		   
+		 $GLOBALS['smarty']->assign('hot_goods', get_cat_recommend_goods('hot', get_children($GLOBALS['smarty']->_var['goods']['cat_id']), 8, 0, $price_arr['min'], $price_arr['max']));
+
+		?>
+          <!--{foreach from=$hot_goods item=goods_item name=cat_item_goods}-->
+         <li {if $smarty.foreach.cat_item_goods.last}class="x_mod_goods_last"{/if}>
+          <div class="mod_goods x_mod_goods">
+            <div class="mod_goods_img"><a target="_blank" href="{$goods_item.url}" title="{$goods_item.name|escape:html}" ><img src="{$goods_item.thumb}" alt="{$goods_item.name|escape:html}"></a></div>
+            <div class="mod_goods_info">
+              <p class="mod_goods_tit"><a target="_blank" href="{$goods_item.url}" title="{$goods_item.name|escape:html}">{$goods_item.name|escape:html}</a></p>
+              <p class="mod_goods_price"><span class="mod_price c_tx1"><span> <!-- {if $goods_item.promote_price neq ""} -->
+            {$goods_item.promote_price}
+            <!-- {else}-->
+            {$goods_item.shop_price}
+            <!--{/if}--></span></span></p>
+            </div>
+          </div>
+        </li>
+         <!--{/foreach}-->
+ </ul>
+    </div>
+  </div>
+</div>
+  <!--left end-->
+  <span class="clr"></span> </div>
+  <div style="height:20px; line-height:20px;"></div>
+ <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var goods_id = {$goods_id};
+var goodsattr_style = {$cfg.goodsattr_style|default:1};
+var gmt_end_time = {$promote_end_time|default:0};
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var goodsId = {$goods_id};
+var now_time = {$now_time};
+
+<!-- {literal} -->
+onload = function(){
+  changePrice();
+  fixpng();
+  try { onload_leftTime(); }
+  catch (e) {}
+}
+
+/**
+ * 点选可选属性或改变数量时修改商品价格的函数
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+    if (document.getElementById('ECS_GOODS_AMOUNT'))
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+  }
+}
+
+<!-- {/literal} -->
+
+
+</script>
+</html>

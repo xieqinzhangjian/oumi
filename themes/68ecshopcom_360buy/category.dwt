@@ -1,0 +1,330 @@
+<?php
+/* 代码增加_start Byjdy */
+$is_category_index=$GLOBALS['db']->getOne("select category_index from ". $GLOBALS['ecs']->table('category') ." where cat_id=". $GLOBALS['smarty']->_var['category']);
+if ( $is_category_index == '1' and !$_REQUEST['price_min'] and !$_REQUEST['price_max'] and !$_REQUEST['brand'] and !$_REQUEST['filter_attr'])
+{
+	require_once ("themes/". $GLOBALS['_CFG']['template'] ."/lib_category_index.php" );	
+}
+/* 代码增加_end Byjdy */
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<script>var jdpts = new Object(); jdpts._st = new Date().getTime();</script>
+{insert_scripts files='jquery-1.5.1.min.js'}
+{insert_scripts files='jquery.json.js,transport.js'} 
+{insert_scripts files='utils.js,common.js,global.js,compare.js'}
+
+<script type="text/javascript">
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/images/misc/201007/skin/df/plist20130808.css" media="all" />
+<link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/images/misc/contrast/skin/2012/pop_compare.css" media="all" />
+<script type="text/javascript">window.pageConfig = { compatible: true }; </script>
+<style>
+
+/* ======商品比较浮动块 ====== */
+#compareBox { background:url(images/comparebox.gif) #fff no-repeat;
+ width:140px;
+ position: absolute;
+ right:1px;
+ top:200px; padding-top:21px;
+}
+
+#compareBox input {
+    width:140px; height:26px;
+    border:none;
+    background:url(images/compareSub.gif) no-repeat; 
+}
+
+#compareList {
+ padding:0px;
+ width:138px;
+ background:#FFFFFF;
+ border:1px solid #91b3cb; padding-top:5px; border-bottom-color:#FFF;
+}
+
+#compareList li {
+ color: #333;
+ text-align:left;
+ background: #eff8ff;
+ padding: 3px 5px;
+ margin: 0 5px 5px 5px; border:1px solid #dceaf5;
+}
+
+#compareList li img {
+ float:right;
+ padding-top:4px;
+}
+</style>
+</head><body style="position:relative;">
+<?php
+if($_REQUEST['id'])
+{
+	$id = $_REQUEST['id'];
+}
+else
+{
+	$id = $_REQUEST['category'];
+}
+function get_categories($cat_id = 0)
+{
+    if ($cat_id > 0)
+    {
+			  $parent_id = $cat_id;
+    }
+    else
+    {
+        $parent_id = 0;
+    }
+
+    /*
+     判断当前分类中全是是否是底级分类，
+     如果是取出底级分类上级分类，
+     如果不是取当前分类及其下的子分类
+    */
+    $sql = 'SELECT count(*) FROM ' . $GLOBALS['ecs']->table('category') . " WHERE parent_id = '$cat_id' AND is_show = 1 ";
+    if ($GLOBALS['db']->getOne($sql) || $parent_id == 0)
+    {
+        /* 获取当前分类及其子分类 */
+        $sql = 'SELECT a.cat_id, a.cat_name, a.sort_order AS parent_order, a.cat_id, a.is_show,' .
+                    'b.cat_id AS child_id, b.cat_name AS child_name, b.sort_order AS child_order ' .
+                'FROM ' . $GLOBALS['ecs']->table('category') . ' AS a ' .
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('category') . ' AS b ON b.parent_id = a.cat_id AND b.is_show = 1 ' .
+                "WHERE a.parent_id = '$parent_id' ORDER BY parent_order ASC, a.cat_id ASC, child_order ASC";
+    }
+    else
+    {
+        /* 获取当前分类及其父分类 */
+        $sql = 'SELECT a.cat_id, a.cat_name, b.cat_id AS child_id, b.cat_name AS child_name, b.sort_order, b.is_show ' .
+                'FROM ' . $GLOBALS['ecs']->table('category') . ' AS a ' .
+                'LEFT JOIN ' . $GLOBALS['ecs']->table('category') . ' AS b ON b.parent_id = a.cat_id AND b.is_show = 1 ' .
+                "WHERE b.parent_id = '$parent_id' ORDER BY sort_order ASC";
+    }
+    $res = $GLOBALS['db']->getAll($sql);
+
+    $cat_arr = array();
+    foreach ($res AS $row)
+    {
+        if ($row['is_show'])
+        {
+            $cat_arr[$row['cat_id']]['id']   = $row['cat_id'];
+            $cat_arr[$row['cat_id']]['name'] = $row['cat_name'];
+            $cat_arr[$row['cat_id']]['url']  = build_uri('category', array('cid' => $row['cat_id']), $row['cat_name']);
+
+            if ($row['child_id'] != NULL)
+            {
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['id']   = $row['child_id'];
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['name'] = $row['child_name'];
+                $cat_arr[$row['cat_id']]['children'][$row['child_id']]['url']  = build_uri('category', array('cid' => $row['child_id']), $row['child_name']);
+            }
+        }
+    }
+
+    return $cat_arr;
+}
+function get_cat_name_add($id)
+{
+    $sql = 'SELECT cat_name ' . 'FROM ' . $GLOBALS['ecs']->table('category')  . "WHERE cat_id =$id " ;
+		$cat_name = $GLOBALS['db']->getOne($sql);
+		return $cat_name;
+}
+function get_parent($value,$id='')
+{
+
+    if($value!=0)
+    {
+			$sql = 'SELECT parent_id FROM ' . $GLOBALS['ecs']->table('category') . " WHERE cat_id = '$value'";
+			$res = $GLOBALS['db']->getOne($sql);
+			return get_parent($res,$value);
+    }
+		else
+		{
+			return $id;
+		}
+}
+include_once("includes/lib_goods.php");
+$this->assign('categories1'     ,    get_categories(get_parent($id)));
+$this->assign('cat_name'     ,       get_cat_name_add(get_parent($id)))
+?>
+<script type="text/javascript" src="themes/68ecshopcom_360buy/images/misc/lib/js/2012/base-2011.js"></script> 
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> <div class="w">
+  <div class="breadcrumb"><!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem --></div>
+</div>
+ 
+
+<!--crumb end-->
+<div class="w main">
+  <div class="right-extra"> <!-- #BeginLibraryItem "/library/best_nei.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!--i-right end--> <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
+    <div id="select" class="m"> 
+      
+      <!--{if $brands.1}-->
+      <dl  class='fore'  id='select-brand'>
+        <dt>品牌：</dt>
+        <dd>
+          <div class='content tab' id='p1'> <b class="zhankai" onclick="pclick1()" id="zhankaidiv"></b> <b class="shousuo" onclick="pclick2()" id="shousuodiv"></b> 
+            <!--{foreach from=$brands item=brand}-->
+            <div><a href='{$brand.url}' <!-- {if $brand.selected} -->class="curr"<!-- {/if} -->>{$brand.brand_name}</a></div>
+            <!--{/foreach}--> 
+            
+          </div>
+        </dd>
+      </dl>
+      <script>    
+	  var pp=document.getElementById('p1');     
+	   pp.style.height='25px' ;
+	        pp.style.overflow='hidden' ;      //点击显示全部
+	  
+	    function pclick1(){    
+		 var pp=document.getElementById('p1');     pp.style.height='auto';
+		document.getElementById('zhankaidiv').style.display="none";
+
+		document.getElementById('shousuodiv').style.display="block"
+		}
+		function pclick2(){    
+		 var pp=document.getElementById('p1');     pp.style.height='25px';
+		
+		document.getElementById('zhankaidiv').style.display="block";
+
+		document.getElementById('shousuodiv').style.display="none"
+		}
+		 </script> 
+      <!--{/if}--> 
+      
+      <!--{foreach from=$filter_attr_list item=filter_attr}-->
+      <dl  >
+        <dt>{$filter_attr.filter_attr_name|escape:html} ：</dt>
+        <dd> 
+          <!--{foreach from=$filter_attr.attr_list item=attr}-->
+          <div><a href='{$attr.url}' <!-- {if $attr.selected} -->class="curr"<!-- {/if} -->>{$attr.attr_value}</a></div>
+          <!--{/foreach}--> 
+        </dd>
+      </dl>
+      <!--{/foreach}--> 
+      
+      <!--{if $price_grade.1}-->
+      <dl  >
+        <dt>价格：</dt>
+        <dd> 
+          <!--{foreach from=$price_grade item=grade}-->
+          <div><a href='{$grade.url}' <!-- {if $grade.selected} -->class="curr"<!-- {/if} -->>{$grade.price_range}</a></div>
+          <!--{/foreach}--> 
+        </dd>
+      </dl>
+      <!--{/if}--> 
+    </div>
+    <!--{/if}--> 
+    <!--select end -->
+    <div style="height:0px; line-height:0px; clear:both;"></div>
+    <!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem -->
+	<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+  <div class="left"> 
+    
+    <!-- 有关键字时导航聚类 --> 
+    <!-- #BeginLibraryItem "/library/category_tree2.lbi" --><!-- #EndLibraryItem --> 
+    
+    <!-- S 左侧导航(无关键词) --> 
+    
+    {if $new_goods} 
+    <!--新品-->
+    <div class="tuan">
+    <div class="tuan_hd">
+      <h3 class="tuan_tit">新品推荐</h3>
+    </div>
+    <div class="tuan_bd">
+      <div class="tuan_goods">
+        <ul>
+          <!--{foreach from=$new_goods item=goods name=hot_goods}-->
+          <li class="tuan_goods_li" >
+            <div class="mod_goods">
+              <div class="mod_goods_img"><a  href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" title="{$goods.name|escape:html}"  width="120" height="120"></a> </div>
+              <div class="mod_goods_info">
+                <p class="mod_goods_promo" title="{$goods.act_title}">{$goods.act_title}</p>
+                <p class="mod_goods_tit"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+                <p class="mod_goods_price"><span class="mod_price"><span>{$goods.market_price}</span></span><span class="tuan_goods_oprice"><span><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></span></span></p>
+            </div>
+            </div>
+          </li>
+          
+          <!--{/foreach}-->
+        </ul>
+      </div>
+      <div class="tuan_more"><a target="_blank" href="search.php?intro=new" class="tuan_more_lk" >更多新品上架&gt;&gt;</a> </div>
+    </div>
+    </div>
+    {/if} 
+    {if $hot_goods} 
+    <!--热销-->
+    <div class="tuan">
+    <div class="tuan_hd">
+      <h3 class="tuan_tit">热卖推荐</h3>
+    </div>
+    <div class="tuan_bd">
+      <div class="tuan_goods">
+        <ul>
+          <!--{foreach from=$hot_goods item=goods name=hot_goods}-->
+          <li class="tuan_goods_li" >
+            <div class="mod_goods">
+              <div class="mod_goods_img"><a  href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" title="{$goods.name|escape:html}"  width="120" height="120"></a> </div>
+              <div class="mod_goods_info">
+                <p class="mod_goods_promo" title="{$goods.act_title}">{$goods.act_title}</p>
+                <p class="mod_goods_tit"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+                <p class="mod_goods_price"><span class="mod_price"><span>{$goods.market_price}</span></span><span class="tuan_goods_oprice"><span><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></span></span></p>
+            </div>
+            </div>
+          </li>
+          
+          <!--{/foreach}-->
+        </ul>
+      </div>
+      <div class="tuan_more"><a target="_blank" href="search.php?intro=new" class="tuan_more_lk" >更多新品上架&gt;&gt;</a> </div>
+    </div>
+    </div>
+    {/if} 
+    {if $top_goods}
+    <div id="hotSell" class="recommend ">
+    <div class="recommend_hd">      <h3 class="recommend_tit">热销排行榜</h3>     </div>     <div class="recommend_bd">      <div class="recommend_goods">       <ul>
+     <!-- {foreach name=top_goods from=$top_goods item=goods}-->
+    <li class="recommend_goods_li" >
+    <div class="mod_goods mod_goods_w60"> 
+    <div class="mod_goods_img"> 
+    <a  class="img"  href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"> <img  src="{$goods.thumb}"  height="60" width="60"><span class="recommend_goods_rank">{$smarty.foreach.top_goods.iteration}</span></a></div>
+    <div class="mod_goods_info"><p class="mod_goods_tit"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.short_name}</a></p><p class="mod_goods_price"><span class="mod_price"><span>{$goods.price}</span></span></p>        </div>       </div>      </li>
+    <!-- {/foreach} -->
+    
+    
+    </ul>      </div>     </div>
+    </div>
+    {/if}
+    
+    <!--本周热销榜-->
+    
+    <!--最近浏览过-->
+  <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+  </div>
+  <!--left end-->
+  <div style="height:0px; line-height:0px; clear:both;"></div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

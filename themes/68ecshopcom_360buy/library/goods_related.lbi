@@ -1,0 +1,34 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $related_goods} -->
+<div id="sea_see_same" style="height: auto;">
+  <div class="x_mod_box xbrowse">
+    <div class="x_mod_box_hd">
+      <div class="x_mod_box_tit">相关商品</div>
+    </div>
+    <div class="x_mod_box_bd">
+      <ul class="x_mod_goods_list">
+      <!--{foreach from=$related_goods item=releated_goods_data name=bought_goods}-->
+         <li {if $smarty.foreach.bought_goods.last} class="x_mod_goods_last"{/if}>
+          <div class="mod_goods x_mod_goods">
+            <div class="mod_goods_img"><a target="_blank" href="{$releated_goods_data.url}" title="{$releated_goods_data.goods_name|escape:html}"><img src="{$releated_goods_data.goods_thumb}" alt="{$releated_goods_data.goods_name|escape:html}"></a></div>
+            <div class="mod_goods_info">
+              <p class="mod_goods_tit"><a target="_blank" href="{$releated_goods_data.url}" title="{$releated_goods_data.goods_name|escape:html}">{$releated_goods_data.short_name}</a></p>
+              <p class="mod_goods_price"><span class="mod_price c_tx1"><span>  <!-- {if $releated_goods_data.promote_price neq 0} -->
+        {$releated_goods_data.formated_promote_price}
+        <!-- {else} -->
+      {$releated_goods_data.shop_price}
+        <!-- {/if} --></p>
+            </div>
+          </div>
+        </li>
+         <!-- {/foreach} -->
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- {/if} -->
+
+
+
+

@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/images/misc/201007/skin/df/computer20120221.css" media="all" />
+
+<script language="javascript"> 
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+
+<script type="text/javascript" src="themes/68ecshopcom_360buy/images/misc/lib/js/e/jquery-1.2.6.pack.js"></script>
+{insert_scripts files='jquery.json.js,transport.js'} 
+
+<script type="text/javascript">window.pageConfig = { compatible: true }; </script>
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+</head>
+<body>
+<script type="text/javascript" src="themes/68ecshopcom_360buy/images/misc/lib/js/2012/base-2011.js"></script>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+  <?php
+	$GLOBALS['smarty']->assign('cat_name',get_cat_name_ex($GLOBALS['smarty']->_var['category']));
+	$GLOBALS['smarty']->assign('child_cat',get_child_cat($GLOBALS['smarty']->_var['category']));
+    $GLOBALS['smarty']->assign('get_cat_brands', get_cat_brands($GLOBALS['smarty']->_var['category'], 24));
+	?>
+ <div class="w" style="margin-top:10px;">
+    <div class="breadcrumb">
+        <h1><a href = "javascript:void(0)">{$cat_name}</a></h1><span>&nbsp;&nbsp;&nbsp;
+        <!--{foreach from=$child_cat item=cat_item name=child_cat}-->
+        <a href="{$cat_item.url}">{$cat_item.name|escape:html}</a>&nbsp;|&nbsp;
+        <!--{/foreach}-->
+        </span>
+     </div>
+</div><!--crumb end-->	
+	<div class="w main">	
+		<div class="m" id="brands">
+			<div class="control" id="brands-left"><b></b></div>
+			<div class="control" id="brands-right"><b></b></div>
+			<div class="mc" id="i-brands">
+				<ul>
+                
+                 <!--{foreach from=$get_cat_brands item=brand_cat name=get_cat_brands}-->
+					<li><a target="_blank" title="APC" href="brand.php?id={$brand_cat.id}"><img height="31" width="88" alt="APC" src="data/brandlogo/{$brand_cat.logo}"></a></li>
+                  <!--{/foreach}-->                 
+				</ul>
+			</div>
+		</div><!--brands-->
+		<script type="text/javascript">
+		$(function(){
+			$("#i-brands").jdMarquee({
+				deriction:"left",
+				width:(screen.width>=1280)?1144:920,
+				height:33,
+				step:8,
+				speed:4,
+				delay: 10,
+				auto: true,
+				control:true,
+				_front:"#brands-right b",
+				_back:"#brands-left b"
+			});
+		})
+		</script>
+		<div class="right-extra">
+			<div class="middle">
+				<div id="slide" class="m">
+					<script type="text/javascript">$("#slide").jdSlide({width:(screen.width>=1200)?766:546,height:240,pics:[{foreach from=$flash_img_list name="flash_img_list" item=fimg}
+					{src:(screen.width>=1200)?"{$fimg.img_url}":"{$fimg.img_url}",href:"{$fimg.img_link}",alt:"",breviary:"#",type:"img"}{if !$smarty.foreach.flash_img_list.last},{/if}
+					{/foreach}]})</script>
+				</div>
+				<div id="madding" >
+					<div class="mt">
+						<h2>新品上市</h2>
+						<div class="extra"></div>
+					</div>
+					<div class="mc list-h" id="madding-1">
+					 {foreach  from=$goods_list_new name="goods_list_new" item=hotgoods}
+					 {if $smarty.foreach.goods_list_new.iteration < 4}	
+					       <dl>
+							<dt class="p-img">
+								<a target="_blank" href="{$hotgoods.url}">
+									<img alt="{$hotgoods.goods_name}" title="{$hotgoods.goods_name}" src="{$hotgoods.goods_thumb}"  width="130" height="130"/>
+								</a>
+							<div class="p-price"><strong>{$hotgoods.shop_price}</strong></div>
+							</dt>
+							<dd class="p-name">
+								<a href="{$hotgoods.url}" title="{$hotgoods.goods_name}" target="_blank">{$hotgoods.goods_name}<font color="#ff6600">{$hotgoods.act_title|truncate:20}</font></a>
+							</dd>
+						</dl>
+					{/if}
+						  {/foreach}
+						</div>
+
+					<div class="mc list-h" id="madding-2">
+					 {foreach  from=$goods_list_new name=goods_list_new item=hotgoods}
+					 {if $smarty.foreach.goods_list_new.iteration < 9 and $smarty.foreach.goods_list_new.iteration >3 }	
+					                <dl>
+							<dt class="p-img">
+								<a target="_blank" href="{$hotgoods.url}">
+									<img src="{$hotgoods.goods_thumb}" width='50' height='50' alt="{$hotgoods.goods_name}" />
+								</a>
+							</dt>
+							<dd class="p-name">
+								<a target="_blank" title="{$hotgoods.goods_name}" href="{$hotgoods.url}">{$hotgoods.goods_name}<font color="#ff6600"></font></a>
+							</dd>
+						 </dl>
+						       	{/if}
+						  {/foreach}
+						                        					</div>
+				</div><!--madding end-->
+				<ul class="m da0x74">
+				 <?php
+		 $GLOBALS['smarty']->assign('topright1',get_advlist('频道页-分类ID'.$GLOBALS['smarty']->_var['category'].'-右侧图片',3));
+	  ?>
+      {foreach from=$topright1 item=ad name=index_image}
+	  <li {if $smarty.foreach.index_image.first}class="fore"{/if}  id="da0x74-{$smarty.foreach.index_image.first}">
+	   <a href="{$ad.url}" target="_blank"><img src="{$ad.image}" app="image:poster" alt=""/></a>
+	  </li>
+    
+      {/foreach} 
+
+				</ul>
+             
+				<!--das end-->
+			</div><!--middle end-->
+			<div class="right">
+	
+				<div class="m limitbuy">
+					<div class="mt">
+						<h2>争分夺秒</h2>
+					</div>
+					<div class="mc">
+						<ul>
+						  <!--{foreach from=$promotion_goods key=key item=goods name="promotion_foreach"}-->
+            <!--{if $smarty.foreach.promotion_foreach.iteration lt 4}-->
+								<li>
+								<div class="p-img">
+									<a href="{$goods.url}" target="_blank">
+										 <img width="100" height="100" title="{$goods.name|escape:html}" data-img="1" alt="{$goods.name|escape:html}" data-lazyload="{$goods.thumb}">
+                                    </a>
+									<div class="pi9"></div>
+									
+                                 </div>
+									<div class="p-name">
+										<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name}<font color="#ff6600">{$goods.act_title}</font></a>
+									</div>
+								<div class="p-price" style=" padding-top:12px; padding-bottom:12px;">
+																		抢购价：<strong>{$goods.promote_price}</strong>（{$goods.zhekou}折）
+								                                    </div>
+                             </li>
+							 
+						<!--{/if}-->
+            <!--{/foreach}-->
+						</ul>
+					</div>
+				</div><!--limitbuy end -->
+			</div><!--right end-->
+			<span class="clr"></span>
+			<div id="plist-1" class="plist">
+				<div class="mt">
+					<h2>热卖推荐</h2>
+					<div class="extra"></div>
+				</div>
+				<div class="mc">
+					<ul class="list-h">
+					  {foreach  from=$goods_list_hot name="goods_list_hot" item=goods}
+            <!-- {if $smarty.foreach.goods_list_hot.iteration < 9} -->
+					     <li class='fore'>
+						                        <div class="p-img"><a target="_blank" title="{$goods.goods_name|escape:html}" href='{$goods.url}'><img alt="{$goods.goods_name|escape:html}" data-lazyload="{$goods.goods_thumb}" width="100" height="100" data-img='1' /></a></div>
+                        <div class="p-name"><a target="_blank" title='{$goods.goods_name|escape:html}' href='{$goods.url}'>{$goods.goods_name}<font color="#ff6600" >{$goods.act_title}</font></a></div>
+                        <div  class="p-price">售价：<strong>
+				<!-- {if $goods.promote_price neq ""} -->
+                {$goods.promote_price}
+                <!-- {else}-->
+                {$goods.shop_price}
+                <!--{/if}-->
+				</strong></div>
+                    	</li>
+                        						   
+                         <!--{/if}-->
+            <!--{/foreach}--> 											
+                    </ul>
+				
+				</div><!--mc end-->
+			</div><!--plist end-->
+		
+			<div id="plist-1" class="plist">
+				<div class="mt">
+					<h2>精品专区</h2>
+					<div class="extra"></div>
+				</div>
+				<div class="mc">
+					<ul class="list-h">
+                     {foreach  from=$goods_list_best name=goods_list_best item=bestgoods}
+					  <!-- {if $smarty.foreach.goods_list_best.iteration < 9} -->
+                     <li class='fore'>
+						                        <div class="p-img"><a target="_blank" title="{$bestgoods.goods_name}" href='{$bestgoods.url}'><img alt="{$bestgoods.goods_thumb}" data-lazyload="{$bestgoods.goods_thumb}" width="100" height="100" data-img='1' /></a></div>
+                        <div class="p-name"><a target="_blank" title='{$bestgoods.goods_name}' href='{$bestgoods.url}'>{$bestgoods.goods_name}<font color="#ff6600" >{$bestgoods.act_title}</font></a></div>
+                        <div  class="p-price">售价：<strong>{if $bestgoods.promote_price > 0}{$bestgoods.promote_price}
+                {else}{$bestgoods.shop_price}
+                {/if}</strong></div>
+                    	</li>
+						{/if}
+                     {/foreach}  						                       
+                     </ul>
+					
+				</div><!--mc end-->
+			</div><!--plist end-->
+			
+			{foreach  from=$childcat_goods item=cat}
+				<div id="plist-1" class="plist">
+				<div class="mt">
+					<h2>{$cat.cat_name}</h2>
+					<div class="extra"></div>
+				</div>
+				<div class="mc">
+					<ul class="list-h">
+		{foreach  from=$cat.children  name="cat_children"  item=catgoods}	
+            <!-- {if $smarty.foreach.cat_children.iteration < 5} -->
+					     <li class='fore'>
+						<div class="p-img"><a target="_blank" title="{$catgoods.goods_name|escape:html}" href='{$catgoods.url}'><img alt="{$catgoods.goods_name|escape:html}" data-lazyload="{$catgoods.goods_thumb}" width="100" height="100" data-img='1' /></a></div>
+                        <div class="p-name"><a target="_blank" title='{$catgoods.goods_name|escape:html}' href='{$catgoods.url}'>{$catgoods.goods_name}<font color="#ff6600" >{$catgoods.act_title}</font></a></div>
+                        <div  class="p-price">售价：<strong>
+				{$catgoods.shop_price}
+				</strong></div>
+                    	</li>
+                        						   
+                         <!--{/if}-->
+            <!--{/foreach}--> 											
+                    </ul>
+				
+				</div><!--mc end-->
+			</div><!--plist end-->
+		
+		{/foreach}
+		
+		
+		</div><!--right-extra end-->
+		
+		<div class="left" style=" width:211px;">
+			<div class="m" id="sortlist">
+				<div class="mt">
+					<h2>{$cat_name}</h2>
+				</div>
+				<div class="mc">
+                
+                 <!--{foreach from=get_categories_tree(0) item=cat name=cat0}-->
+                  <!--{if $current_cat_pr_id eq $cat.id}-->
+                  <!--{foreach from=$cat.cat_id item=child name=namechild}-->	
+				  <div class='item current'>
+						<h3>
+							<b>
+							</b>
+							<a href="{$child.url}">{$child.name|escape:html}</a>
+						</h3>
+							<ul> <!--{foreach from=$child.cat_id item=childer}-->
+	 					    							  <li><a href="{$childer.url}">{$childer.name}</a></li>
+    							    	 <!--{/foreach}-->																																																														</ul>
+					</div>
+                    <!--{/foreach}-->	
+                    {/if}
+				
+                 <!--{/foreach}-->
+					                 
+                                     
+				</div>
+			</div><!--sortlist end-->
+			
+		
+	      <!-- #BeginLibraryItem "/library/top10.lbi" --><!-- #EndLibraryItem -->
+       
+		
+            
+<?php
+$GLOBALS['smarty']->assign('index_image1',get_advlist('频道页-分类ID'.$GLOBALS['smarty']->_var['category'].'-左侧图片', 5));
+?>
+
+{foreach from=$index_image1 item=ad name=index_image}
+<div class="m da211x138" id="miaozhen{$smarty.foreach.index_image.iteration}" style=" width:211px;">
+<script type="text/javascript">(function(){var ads=[{width:211,width2:0,height:138,url:"{$ad.image}",url2:"",alt:"",link:"{$ad.url}"}];var rate=[1];asyncScript(function(){setRandomAds(ads,rate,"miaozhen{$smarty.foreach.index_image.iteration}",false);})})();</script></div>
+{/foreach} 
+</div><!--left end-->		
+<span class="clr"></span>
+</div><!--main end-->
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+<script type="text/javascript" src="themes/68ecshopcom_360buy/images/misc/lib/js/2012/lib-v1.js"></script>
+
+</body>
+</html>
